@@ -1,0 +1,60 @@
+{
+  "schema_version": "intent-output/1.4.0-multi",
+  "request": {
+    "query_id": "347cbb70-9b60-40d3-ac19-8d7910ccc30a",
+    "user_id": "37ec97fc-e77b-4691-8b99-9ba87878f636",
+    "created_at": "2025-08-09T22:12:36Z",
+    "text": "Show me the tile submittal and is it approved?"
+  },
+  "composition": {
+    "mode": "SEQUENCE",
+    "ordering": [
+      0,
+      1
+    ],
+    "join_keys": [
+      {
+        "from": 0,
+        "to": 1,
+        "key": "submittal_id"
+      }
+    ],
+    "response_policy": "single_message"
+  },
+  "intents": [
+    {
+      "coarse_class": "DOC",
+      "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+      "confidence": 0.93,
+      "entities": {
+        "submittal_topic": "tile"
+      },
+      "policies": {
+        "freshness": "latest_only"
+      },
+      "routing_hints": {
+        "tools": [
+          "SubmittalSearch"
+        ],
+        "few_shot_id": "doc_retrieval_v2"
+      }
+    },
+    {
+      "coarse_class": "STAT",
+      "intent_code": "STAT:SUBMITTAL_STATUS",
+      "confidence": 0.9,
+      "entities": {
+        "submittal_id": "<from_step_0>"
+      },
+      "policies": {
+        "freshness": "latest_only"
+      },
+      "routing_hints": {
+        "tools": [
+          "SubmittalStatus"
+        ],
+        "few_shot_id": "status_v1"
+      }
+    }
+  ]
+}
