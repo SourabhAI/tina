@@ -1,0 +1,19 @@
+{
+  "total_samples": 555,
+  "split_ratios": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "split_counts": {
+    "train": 443,
+    "validation": 56,
+    "test": 56
+  },
+  "split_percentages": {
+    "train": 79.82,
+    "validation": 10.09,
+    "test": 10.09
+  },
+  "random_seed": 42
+}
