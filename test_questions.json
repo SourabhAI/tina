@@ -2,281 +2,337 @@
   {
     "question_text": "What is WEG1 grille?",
     "created_at": "2024-02-12 21:09:57.901+00",
-    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950"
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "query_id": "q_000232"
   },
   {
     "question_text": "what is the flooring in the leasing office",
     "created_at": "2024-03-19 15:14:09.231+00",
-    "user_id": "c35ddc0f-ade1-4d1f-8728-449b36e15dbe"
+    "user_id": "c35ddc0f-ade1-4d1f-8728-449b36e15dbe",
+    "query_id": "q_000375"
   },
   {
     "question_text": "How many air exchanges per hour in the buildings?",
     "created_at": "2024-01-05 17:49:52.41+00",
-    "user_id": "fcad35ff-bb4b-435d-84f9-2f3b00c24f57"
+    "user_id": "fcad35ff-bb4b-435d-84f9-2f3b00c24f57",
+    "query_id": "q_000056"
   },
   {
     "question_text": "what company supplies hardware for access control doors",
     "created_at": "2024-03-20 12:08:20.388+00",
-    "user_id": "50ad58a0-da8d-49d1-9d07-8a62eac815c4"
+    "user_id": "50ad58a0-da8d-49d1-9d07-8a62eac815c4",
+    "query_id": "q_000382"
   },
   {
     "question_text": "what is the baseboard heater warranty observation?",
     "created_at": "2024-01-09 13:23:17.775+00",
-    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950"
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "query_id": "q_000071"
   },
   {
     "question_text": "Show me requirements for labeling fire rated walls ",
     "created_at": "2024-03-15 15:18:47.141+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000371"
   },
   {
     "question_text": "what is wd-01",
     "created_at": "2024-03-19 15:15:03.462+00",
-    "user_id": "c35ddc0f-ade1-4d1f-8728-449b36e15dbe"
+    "user_id": "c35ddc0f-ade1-4d1f-8728-449b36e15dbe",
+    "query_id": "q_000377"
   },
   {
     "question_text": "What do the documents say about data cabling for the parking garage equipment?",
     "created_at": "2024-01-15 18:39:01.942+00",
-    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e"
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "query_id": "q_000082"
   },
   {
     "question_text": "Windows",
     "created_at": "2024-03-20 20:18:46.705+00",
-    "user_id": "d825bc2b-2f00-4ce1-bfc5-ac891859b9b2"
+    "user_id": "d825bc2b-2f00-4ce1-bfc5-ac891859b9b2",
+    "query_id": "q_000514"
   },
   {
     "question_text": "How many auger cast piles have been drilled to date ",
     "created_at": "2024-03-20 20:06:07.543+00",
-    "user_id": "fca109d6-e7c7-419e-adb1-dfc558cc4eaf"
+    "user_id": "fca109d6-e7c7-419e-adb1-dfc558cc4eaf",
+    "query_id": "q_000503"
   },
   {
     "question_text": "What is the color of AP-1",
     "created_at": "2024-02-01 13:29:17.185+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000132"
   },
   {
     "question_text": "What should the finish on the Exhibit Hall cable tray be?",
     "created_at": "2024-01-10 13:30:28.526+00",
-    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e"
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "query_id": "q_000077"
   },
   {
     "question_text": "What spec section are fan coil untis under?",
     "created_at": "2024-03-01 18:06:20.659+00",
-    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e"
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "query_id": "q_000335"
   },
   {
     "question_text": "Pull up standard bp-104-3",
     "created_at": "2024-02-22 13:59:37.439+00",
-    "user_id": "fcad35ff-bb4b-435d-84f9-2f3b00c24f57"
+    "user_id": "fcad35ff-bb4b-435d-84f9-2f3b00c24f57",
+    "query_id": "q_000196"
   },
   {
     "question_text": "what extra materials are required to be turned over for toilet accessories",
     "created_at": "2024-03-27 12:13:56.513+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000479"
   },
   {
     "question_text": "What spec section covers wireless access points?",
     "created_at": "2024-02-01 13:41:25.564+00",
-    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e"
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "query_id": "q_000159"
   },
   {
     "question_text": "Show me door hardware group 31",
     "created_at": "2024-02-09 15:21:54.555+00",
-    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f"
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "query_id": "q_000209"
   },
   {
     "question_text": "What is the thickness of the drywall in the residence? ",
     "created_at": "2023-12-15 14:20:19.26+00",
-    "user_id": "64201228-e558-4722-962e-69c831e1ea8f"
+    "user_id": "64201228-e558-4722-962e-69c831e1ea8f",
+    "query_id": "q_000011"
   },
   {
     "question_text": "Elaborate on what rigging requirements are included on the project",
     "created_at": "2024-01-10 15:51:44.659+00",
-    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e"
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "query_id": "q_000079"
   },
   {
     "question_text": "What is the required differential pressure at stair doors during stair pressurization?",
     "created_at": "2024-03-01 18:51:26.42+00",
-    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e"
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "query_id": "q_000339"
   },
   {
     "question_text": "what rfi references cane rail",
     "created_at": "2024-03-22 14:54:19.235+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000486"
   },
   {
     "question_text": "show me information about planter box",
     "created_at": "2024-03-22 14:50:03.269+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000481"
   },
   {
     "question_text": "What are the most recent shop drawings for mechanical piping on the 32nd floor?",
     "created_at": "2023-11-08 16:11:43.146+00",
-    "user_id": "64201228-e558-4722-962e-69c831e1ea8f"
+    "user_id": "64201228-e558-4722-962e-69c831e1ea8f",
+    "query_id": "q_000007"
   },
   {
     "question_text": "What size and color is RB-2",
     "created_at": "2024-02-16 17:26:46.025+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000178"
   },
   {
     "question_text": "What do the specifications in section 10 22 33 say about differential pressure? ",
     "created_at": "2024-02-29 21:20:19.901+00",
-    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e"
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "query_id": "q_000258"
   },
   {
     "question_text": "What do the specifications say about materials, other MEP's etc. touching or being supported by fire protection piping? ",
     "created_at": "2024-01-25 18:49:05.342+00",
-    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e"
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "query_id": "q_000164"
   },
   {
     "question_text": "What color is the tile flooring in the corridors? ",
     "created_at": "2024-03-11 12:19:55.446+00",
-    "user_id": "eebe0f7f-456e-4775-8586-d0c7c94940b5"
+    "user_id": "eebe0f7f-456e-4775-8586-d0c7c94940b5",
+    "query_id": "q_000361"
   },
   {
     "question_text": "How many windows do we have in building 4",
     "created_at": "2024-03-19 18:20:18.982+00",
-    "user_id": "7d48d25f-dae8-4daa-939a-52da06df6356"
+    "user_id": "7d48d25f-dae8-4daa-939a-52da06df6356",
+    "query_id": "q_000435"
   },
   {
     "question_text": "CUP Lifeline",
     "created_at": "2024-01-16 20:58:13.725+00",
-    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950"
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "query_id": "q_000087"
   },
   {
     "question_text": "What is the height of the building ",
     "created_at": "2024-03-19 16:03:25.52+00",
-    "user_id": "42703ba8-b086-46f7-81f8-431a9e3c41b1"
+    "user_id": "42703ba8-b086-46f7-81f8-431a9e3c41b1",
+    "query_id": "q_000403"
   },
   {
     "question_text": "How many sealant pull tests are required for stone veneer masonry? ",
     "created_at": "2024-02-29 21:23:40.351+00",
-    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950"
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "query_id": "q_000285"
   },
   {
     "question_text": "How many retaining walls are there ",
     "created_at": "2024-03-20 20:15:40.221+00",
-    "user_id": "42703ba8-b086-46f7-81f8-431a9e3c41b1"
+    "user_id": "42703ba8-b086-46f7-81f8-431a9e3c41b1",
+    "query_id": "q_000513"
   },
   {
     "question_text": "What is the framers scope of work?",
     "created_at": "2024-03-08 15:27:23.476+00",
-    "user_id": "eebe0f7f-456e-4775-8586-d0c7c94940b5"
+    "user_id": "eebe0f7f-456e-4775-8586-d0c7c94940b5",
+    "query_id": "q_000319"
   },
   {
     "question_text": "What is the current status of observation #2629: Patch drywall",
     "created_at": "2024-01-09 17:06:17.036+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000074"
   },
   {
     "question_text": "How many cameras are allocated for garage",
     "created_at": "2024-03-21 18:15:50.39+00",
-    "user_id": "e7cd71a5-a10c-4b25-b794-5c88f8560dc5"
+    "user_id": "e7cd71a5-a10c-4b25-b794-5c88f8560dc5",
+    "query_id": "q_000544"
   },
   {
     "question_text": "What is CH-1?",
     "created_at": "2024-02-02 19:00:04.229+00",
-    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950"
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "query_id": "q_000138"
   },
   {
     "question_text": "What is a WEG in mechanical terms?",
     "created_at": "2024-01-10 22:22:28.152+00",
-    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e"
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "query_id": "q_000031"
   },
   {
     "question_text": "who is the site superintendent",
     "created_at": "2024-03-19 20:26:23.675+00",
-    "user_id": "e7cd71a5-a10c-4b25-b794-5c88f8560dc5"
+    "user_id": "e7cd71a5-a10c-4b25-b794-5c88f8560dc5",
+    "query_id": "q_000437"
   },
   {
     "question_text": "what color should three hour rated walls be labeled  ",
     "created_at": "2024-02-12 20:23:33.511+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000212"
   },
   {
     "question_text": "show me the artwork shop drawings submitted by Rob Jones",
     "created_at": "2024-01-25 22:52:12.838+00",
-    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f"
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "query_id": "q_000085"
   },
   {
     "question_text": "What are the finishes at the balconies?",
     "created_at": "2024-03-22 18:05:50.325+00",
-    "user_id": "2fa78a12-f3c1-44c7-ad74-dacee0caab46"
+    "user_id": "2fa78a12-f3c1-44c7-ad74-dacee0caab46",
+    "query_id": "q_000551"
   },
   {
     "question_text": "Are there maintenance materials, attic stock, or extra materials requirements for elevators and escalators? ",
     "created_at": "2024-03-01 14:03:37.567+00",
-    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950"
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "query_id": "q_000317"
   },
   {
     "question_text": "what are the different types of lights?",
     "created_at": "2024-03-21 12:29:25.861+00",
-    "user_id": "44685288-be6e-492f-bd76-db617b6f745d"
+    "user_id": "44685288-be6e-492f-bd76-db617b6f745d",
+    "query_id": "q_000527"
   },
   {
     "question_text": "What color are all walls painted unless noted otherwise? ",
     "created_at": "2024-02-02 18:57:22.634+00",
-    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950"
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "query_id": "q_000154"
   },
   {
     "question_text": "what CB will the changes resulting from RFI 1824 be captured in ",
     "created_at": "2024-01-10 14:22:33.006+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000003"
   },
   {
     "question_text": "What is the finished floor height of the retail space ",
     "created_at": "2024-03-20 20:06:24.987+00",
-    "user_id": "44685288-be6e-492f-bd76-db617b6f745d"
+    "user_id": "44685288-be6e-492f-bd76-db617b6f745d",
+    "query_id": "q_000504"
   },
   {
     "question_text": "is there an as-built submittal requirement for terrazzo flooring",
     "created_at": "2024-02-12 20:30:07.828+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000211"
   },
   {
     "question_text": "what are the requirements for labeling fire rated walls ",
     "created_at": "2024-02-06 15:32:38.353+00",
-    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919"
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "query_id": "q_000177"
   },
   {
     "question_text": "how many B3 windows are there",
     "created_at": "2024-03-19 16:09:52.132+00",
-    "user_id": "c35ddc0f-ade1-4d1f-8728-449b36e15dbe"
+    "user_id": "c35ddc0f-ade1-4d1f-8728-449b36e15dbe",
+    "query_id": "q_000399"
   },
   {
     "question_text": "light type schdule",
     "created_at": "2024-03-21 12:30:53.918+00",
-    "user_id": "44685288-be6e-492f-bd76-db617b6f745d"
+    "user_id": "44685288-be6e-492f-bd76-db617b6f745d",
+    "query_id": "q_000528"
   },
   {
     "question_text": "How many light fixtures are in building 2",
     "created_at": "2024-03-19 18:17:06.69+00",
-    "user_id": "2783c19b-7a7a-45d9-9e8b-2836796724e1"
+    "user_id": "2783c19b-7a7a-45d9-9e8b-2836796724e1",
+    "query_id": "q_000426"
   },
   {
     "question_text": "I need a verification code ",
     "created_at": "2024-03-19 15:49:07.059+00",
-    "user_id": "cf9bb0fd-94e1-410f-8b4e-b66f6f371fda"
+    "user_id": "cf9bb0fd-94e1-410f-8b4e-b66f6f371fda",
+    "query_id": "q_000389"
   },
   {
     "question_text": "How many building 2 observations for framing are there?",
     "created_at": "2024-03-26 17:07:22.58+00",
-    "user_id": "e7cd71a5-a10c-4b25-b794-5c88f8560dc5"
+    "user_id": "e7cd71a5-a10c-4b25-b794-5c88f8560dc5",
+    "query_id": "q_000552"
   },
   {
     "question_text": "Can I see the paver plan ",
     "created_at": "2024-03-20 19:57:35.494+00",
-    "user_id": "42703ba8-b086-46f7-81f8-431a9e3c41b1"
+    "user_id": "42703ba8-b086-46f7-81f8-431a9e3c41b1",
+    "query_id": "q_000498"
   },
   {
     "question_text": "what color paint are the columns in the Atrium",
     "created_at": "2024-03-01 13:05:46.732+00",
-    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f"
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "query_id": "q_000262"
   },
   {
     "question_text": "Show me the tile shop drawings",
     "created_at": "2024-02-21 12:16:28.525+00",
-    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f"
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "query_id": "q_000236"
   }
 ]

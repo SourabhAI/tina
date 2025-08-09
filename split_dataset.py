@@ -32,6 +32,13 @@ def split_dataset(input_file='questions.json', train_ratio=0.8, val_ratio=0.1, t
     
     print(f"Total samples: {len(data)}")
     
+    # Assign unique query_id to each question
+    print("Assigning unique query_id to each question...")
+    for i, question in enumerate(data):
+        question['query_id'] = f"q_{i+1:06d}"  # Format: q_000001, q_000002, etc.
+    
+    print(f"✓ Assigned query_ids from q_000001 to q_{len(data):06d}")
+    
     # First split: separate out test set (10%)
     train_val_data, test_data = train_test_split(
         data, 
@@ -58,9 +65,9 @@ def split_dataset(input_file='questions.json', train_ratio=0.8, val_ratio=0.1, t
     print(f"Test set: {len(test_data)} samples ({len(test_data)/len(data)*100:.1f}%)")
     
     # Verify no overlap between sets
-    train_ids = set([q.get('id', str(q)) for q in train_data])
-    val_ids = set([q.get('id', str(q)) for q in val_data])
-    test_ids = set([q.get('id', str(q)) for q in test_data])
+    train_ids = set([q['query_id'] for q in train_data])
+    val_ids = set([q['query_id'] for q in val_data])
+    test_ids = set([q['query_id'] for q in test_data])
     
     assert len(train_ids & val_ids) == 0, "Overlap found between train and validation sets"
     assert len(train_ids & test_ids) == 0, "Overlap found between train and test sets"
