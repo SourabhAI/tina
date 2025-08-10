@@ -2,41 +2,42 @@
   "total_questions": 56,
   "successful": 56,
   "failed": 0,
-  "average_processing_time_ms": 1.858349357332502,
+  "average_processing_time_ms": 6.321315254483904,
   "intent_distribution": {
     "DOC:RFI_RETRIEVE": 1,
     "ADMIN:DEFINITION": 3,
     "ADMIN:PERSONNEL": 1,
     "PROD:HARDWARE_GROUP": 3,
     "DOC:SUBMITTAL_RETRIEVE": 25,
-    "SCHED:ACTIVITY_SEQUENCE": 5,
-    "PARAM:DIMENSIONS": 5,
+    "SCHED:ACTIVITY_SEQUENCE": 4,
+    "PARAM:DIMENSIONS": 6,
+    "DRAW:DRAWING_MAP": 6,
     "ADMIN:VENDOR_LIST": 3,
     "SPEC:SECTION_MAP": 1,
     "LOC:PHYSICAL_LOCATION": 3,
     "PROD:PRODUCT_LOOKUP": 1,
-    "DRAW:DRAWING_MAP": 2,
     "SCHED:DOOR_SCHEDULE": 2,
     "STAT:SUBMITTAL_STATUS": 1,
-    "TRAN:TRANSLATE": 1
+    "TRAN:TRANSLATE": 2
   },
   "coarse_class_distribution": {
     "DOC": 26,
     "ADMIN": 7,
     "PROD": 4,
-    "SCHED": 7,
-    "PARAM": 5,
+    "SCHED": 6,
+    "PARAM": 6,
+    "DRAW": 6,
     "SPEC": 1,
     "LOC": 3,
-    "DRAW": 2,
     "STAT": 1,
-    "TRAN": 1
+    "TRAN": 2
   },
-  "single_intent_count": 55,
-  "multi_intent_count": 1,
+  "single_intent_count": 50,
+  "multi_intent_count": 6,
   "composition_modes": {
-    "SINGLE": 55,
-    "PARALLEL": 1
+    "SINGLE": 50,
+    "SEQUENCE": 1,
+    "PARALLEL": 5
   },
   "entity_type_counts": {
     "product_code": 9,
@@ -49,7 +50,7 @@
     "target_language": 1,
     "discipline": 1
   },
-  "start_time": "2025-08-09T19:43:48.612993",
-  "end_time": "2025-08-09T19:43:48.717901",
-  "total_duration_seconds": 0.104908
+  "start_time": "2025-08-09T19:55:46.683096",
+  "end_time": "2025-08-09T19:55:47.038276",
+  "total_duration_seconds": 0.35518
 }

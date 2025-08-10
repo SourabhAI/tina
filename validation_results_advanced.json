@@ -8,7 +8,7 @@
       {
         "intent_code": "DOC:RFI_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9702144351256269,
+        "confidence": 0.9523809523809523,
         "entities": {}
       }
     ],
@@ -18,7 +18,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 6.02412223815918,
+    "processing_time_ms": 19.069910049438477,
     "success": true,
     "warnings": []
   },
@@ -31,7 +31,7 @@
       {
         "intent_code": "ADMIN:DEFINITION",
         "coarse_class": "ADMIN",
-        "confidence": 0.29636172958467977,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -41,7 +41,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.4448165893554688,
+    "processing_time_ms": 6.065845489501953,
     "success": true,
     "warnings": []
   },
@@ -54,7 +54,7 @@
       {
         "intent_code": "ADMIN:PERSONNEL",
         "coarse_class": "ADMIN",
-        "confidence": 0.30541120041788516,
+        "confidence": 0.16666666666666666,
         "entities": {}
       }
     ],
@@ -64,7 +64,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0466575622558594,
+    "processing_time_ms": 6.789684295654297,
     "success": true,
     "warnings": []
   },
@@ -77,7 +77,7 @@
       {
         "intent_code": "PROD:HARDWARE_GROUP",
         "coarse_class": "PROD",
-        "confidence": 0.43356150665294296,
+        "confidence": 0.16666666666666666,
         "entities": {
           "product_code": "AC-5"
         }
@@ -91,7 +91,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0340213775634766,
+    "processing_time_ms": 7.781982421875,
     "success": true,
     "warnings": []
   },
@@ -104,7 +104,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.7317879542327811,
+        "confidence": 1.0,
         "entities": {
           "product_code": "ACT-9",
           "topic": "ACT-9",
@@ -122,7 +122,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.6407966613769531,
+    "processing_time_ms": 5.711793899536133,
     "success": true,
     "warnings": []
   },
@@ -135,7 +135,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9204808512836135,
+        "confidence": 1.0,
         "entities": {
           "topic": "DF_4",
           "submittal_topic": "DF_4"
@@ -151,7 +151,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.3620853424072266,
+    "processing_time_ms": 6.908178329467773,
     "success": true,
     "warnings": []
   },
@@ -164,7 +164,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9632769046542902,
+        "confidence": 1.0,
         "entities": {
           "product_code": "A-59",
           "topic": "sign A59",
@@ -182,7 +182,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.1281967163085938,
+    "processing_time_ms": 7.578849792480469,
     "success": true,
     "warnings": []
   },
@@ -195,7 +195,7 @@
       {
         "intent_code": "SCHED:ACTIVITY_SEQUENCE",
         "coarse_class": "SCHED",
-        "confidence": 0.7448965953188799,
+        "confidence": 0.6666666666666666,
         "entities": {
           "area": "lobby"
         }
@@ -209,7 +209,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.15203857421875,
+    "processing_time_ms": 8.720874786376953,
     "success": true,
     "warnings": []
   },
@@ -222,7 +222,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9464539575201016,
+        "confidence": 1.0,
         "entities": {
           "topic": "size of the Kooltherm insulated panels",
           "submittal_topic": "size of the Kooltherm insulated panels"
@@ -238,7 +238,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.035928726196289,
+    "processing_time_ms": 5.690097808837891,
     "success": true,
     "warnings": []
   },
@@ -251,7 +251,7 @@
       {
         "intent_code": "PARAM:DIMENSIONS",
         "coarse_class": "PARAM",
-        "confidence": 0.21282778930194443,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -261,7 +261,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.1398792266845703,
+    "processing_time_ms": 5.5561065673828125,
     "success": true,
     "warnings": []
   },
@@ -272,9 +272,15 @@
     "created_at": "2024-02-27 18:56:24.288+00",
     "intents": [
       {
+        "intent_code": "DRAW:DRAWING_MAP",
+        "coarse_class": "DRAW",
+        "confidence": 0.16666666666666666,
+        "entities": {}
+      },
+      {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.8909417024386338,
+        "confidence": 1.0,
         "entities": {
           "topic": "required inches of water column pressurization that stairs are to be pressurized to",
           "submittal_topic": "required inches of water column pressurization that stairs are to be pressurized to"
@@ -285,12 +291,13 @@
       "topic": "required inches of water column pressurization that stairs are to be pressurized to",
       "submittal_topic": "required inches of water column pressurization that stairs are to be pressurized to"
     },
-    "composition_mode": "SINGLE",
+    "composition_mode": "SEQUENCE",
     "execution_order": [
-      0
+      0,
+      1
     ],
     "join_keys": [],
-    "processing_time_ms": 1.522064208984375,
+    "processing_time_ms": 10.049104690551758,
     "success": true,
     "warnings": []
   },
@@ -303,7 +310,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9336297550737749,
+        "confidence": 1.0,
         "entities": {
           "topic": "amp VEMS alarm",
           "submittal_topic": "amp VEMS alarm"
@@ -319,7 +326,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.9458065032958984,
+    "processing_time_ms": 5.247354507446289,
     "success": true,
     "warnings": []
   },
@@ -330,9 +337,15 @@
     "created_at": "2024-03-12 17:18:01.543+00",
     "intents": [
       {
+        "intent_code": "DRAW:DRAWING_MAP",
+        "coarse_class": "DRAW",
+        "confidence": 0.6666666666666666,
+        "entities": {}
+      },
+      {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9650838370720576,
+        "confidence": 1.0,
         "entities": {
           "topic": "amp ESP Sample portable",
           "submittal_topic": "amp ESP Sample portable"
@@ -343,12 +356,13 @@
       "topic": "amp ESP Sample portable",
       "submittal_topic": "amp ESP Sample portable"
     },
-    "composition_mode": "SINGLE",
+    "composition_mode": "PARALLEL",
     "execution_order": [
+      1,
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.3420581817626953,
+    "processing_time_ms": 9.55510139465332,
     "success": true,
     "warnings": []
   },
@@ -359,9 +373,15 @@
     "created_at": "2024-02-02 19:12:26.253+00",
     "intents": [
       {
+        "intent_code": "PARAM:DIMENSIONS",
+        "coarse_class": "PARAM",
+        "confidence": 0.16666666666666666,
+        "entities": {}
+      },
+      {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.7439163730945748,
+        "confidence": 1.0,
         "entities": {
           "product_code": "CT-2",
           "topic": "more information on CT-2",
@@ -374,12 +394,13 @@
       "topic": "more information on CT-2",
       "submittal_topic": "more information on CT-2"
     },
-    "composition_mode": "SINGLE",
+    "composition_mode": "PARALLEL",
     "execution_order": [
+      1,
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.1382102966308594,
+    "processing_time_ms": 8.773088455200195,
     "success": true,
     "warnings": []
   },
@@ -392,7 +413,7 @@
       {
         "intent_code": "SCHED:ACTIVITY_SEQUENCE",
         "coarse_class": "SCHED",
-        "confidence": 0.21730568058568786,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -402,7 +423,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.4522075653076172,
+    "processing_time_ms": 5.270957946777344,
     "success": true,
     "warnings": []
   },
@@ -415,7 +436,7 @@
       {
         "intent_code": "SCHED:ACTIVITY_SEQUENCE",
         "coarse_class": "SCHED",
-        "confidence": 0.17882402159876842,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -425,7 +446,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0640621185302734,
+    "processing_time_ms": 4.888772964477539,
     "success": true,
     "warnings": []
   },
@@ -438,7 +459,7 @@
       {
         "intent_code": "PARAM:DIMENSIONS",
         "coarse_class": "PARAM",
-        "confidence": 0.2587258694036134,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -448,7 +469,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.8270740509033203,
+    "processing_time_ms": 5.311012268066406,
     "success": true,
     "warnings": []
   },
@@ -461,7 +482,7 @@
       {
         "intent_code": "ADMIN:VENDOR_LIST",
         "coarse_class": "ADMIN",
-        "confidence": 0.29564024557791513,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -471,7 +492,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.8261203765869141,
+    "processing_time_ms": 5.882024765014648,
     "success": true,
     "warnings": []
   },
@@ -484,7 +505,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9433435823815053,
+        "confidence": 1.0,
         "entities": {
           "topic": "drywall finish at grand stair",
           "submittal_topic": "drywall finish at grand stair"
@@ -500,7 +521,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.317739486694336,
+    "processing_time_ms": 4.926204681396484,
     "success": true,
     "warnings": []
   },
@@ -513,7 +534,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9368669113302782,
+        "confidence": 1.0,
         "entities": {
           "topic": "air compressor",
           "submittal_topic": "air compressor"
@@ -529,7 +550,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.8842220306396484,
+    "processing_time_ms": 6.942987442016602,
     "success": true,
     "warnings": []
   },
@@ -542,7 +563,7 @@
       {
         "intent_code": "PROD:HARDWARE_GROUP",
         "coarse_class": "PROD",
-        "confidence": 0.6025938369193063,
+        "confidence": 0.5,
         "entities": {}
       }
     ],
@@ -552,7 +573,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.032114028930664,
+    "processing_time_ms": 5.543708801269531,
     "success": true,
     "warnings": []
   },
@@ -565,7 +586,7 @@
       {
         "intent_code": "PARAM:DIMENSIONS",
         "coarse_class": "PARAM",
-        "confidence": 0.3598552974110488,
+        "confidence": 0.16666666666666666,
         "entities": {}
       }
     ],
@@ -575,7 +596,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.8969306945800781,
+    "processing_time_ms": 5.28407096862793,
     "success": true,
     "warnings": []
   },
@@ -588,7 +609,7 @@
       {
         "intent_code": "SPEC:SECTION_MAP",
         "coarse_class": "SPEC",
-        "confidence": 0.8118130802095204,
+        "confidence": 0.6666666666666666,
         "entities": {}
       }
     ],
@@ -598,7 +619,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 34.483909606933594,
+    "processing_time_ms": 6.348133087158203,
     "success": true,
     "warnings": []
   },
@@ -611,7 +632,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9280937854592493,
+        "confidence": 1.0,
         "entities": {
           "topic": "project address",
           "submittal_topic": "project address"
@@ -627,7 +648,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.7321109771728516,
+    "processing_time_ms": 5.463600158691406,
     "success": true,
     "warnings": []
   },
@@ -640,7 +661,7 @@
       {
         "intent_code": "LOC:PHYSICAL_LOCATION",
         "coarse_class": "LOC",
-        "confidence": 0.2814511592449462,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -650,7 +671,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.310110092163086,
+    "processing_time_ms": 5.385875701904297,
     "success": true,
     "warnings": []
   },
@@ -663,7 +684,7 @@
       {
         "intent_code": "PROD:PRODUCT_LOOKUP",
         "coarse_class": "PROD",
-        "confidence": 0.8810101851788689,
+        "confidence": 0.9523809523809523,
         "entities": {
           "product_code": "WC-6"
         }
@@ -677,7 +698,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0881423950195312,
+    "processing_time_ms": 7.502079010009766,
     "success": true,
     "warnings": []
   },
@@ -690,7 +711,7 @@
       {
         "intent_code": "DRAW:DRAWING_MAP",
         "coarse_class": "DRAW",
-        "confidence": 0.6320201271890761,
+        "confidence": 0.5,
         "entities": {}
       }
     ],
@@ -700,7 +721,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0080337524414062,
+    "processing_time_ms": 5.087137222290039,
     "success": true,
     "warnings": []
   },
@@ -713,7 +734,7 @@
       {
         "intent_code": "ADMIN:VENDOR_LIST",
         "coarse_class": "ADMIN",
-        "confidence": 0.27052478938049496,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -723,7 +744,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.9441375732421875,
+    "processing_time_ms": 4.9228668212890625,
     "success": true,
     "warnings": []
   },
@@ -736,7 +757,7 @@
       {
         "intent_code": "SCHED:ACTIVITY_SEQUENCE",
         "coarse_class": "SCHED",
-        "confidence": 0.21513997244829688,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -746,7 +767,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.1677742004394531,
+    "processing_time_ms": 5.39398193359375,
     "success": true,
     "warnings": []
   },
@@ -759,7 +780,7 @@
       {
         "intent_code": "ADMIN:DEFINITION",
         "coarse_class": "ADMIN",
-        "confidence": 0.4382601644189966,
+        "confidence": 0.16666666666666666,
         "entities": {}
       }
     ],
@@ -769,7 +790,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.2631416320800781,
+    "processing_time_ms": 4.748106002807617,
     "success": true,
     "warnings": []
   },
@@ -780,9 +801,9 @@
     "created_at": "2023-12-15 16:43:38.595+00",
     "intents": [
       {
-        "intent_code": "SCHED:ACTIVITY_SEQUENCE",
-        "coarse_class": "SCHED",
-        "confidence": 0.2000602486392073,
+        "intent_code": "DRAW:DRAWING_MAP",
+        "coarse_class": "DRAW",
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -792,7 +813,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0859966278076172,
+    "processing_time_ms": 4.6939849853515625,
     "success": true,
     "warnings": []
   },
@@ -805,7 +826,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9421155758760823,
+        "confidence": 1.0,
         "entities": {
           "topic": "thickest Pressure treated slab",
           "submittal_topic": "thickest Pressure treated slab"
@@ -821,7 +842,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.001119613647461,
+    "processing_time_ms": 5.217075347900391,
     "success": true,
     "warnings": []
   },
@@ -834,7 +855,7 @@
       {
         "intent_code": "ADMIN:VENDOR_LIST",
         "coarse_class": "ADMIN",
-        "confidence": 0.20518648431397077,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -844,7 +865,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.9171962738037109,
+    "processing_time_ms": 5.774021148681641,
     "success": true,
     "warnings": []
   },
@@ -857,7 +878,7 @@
       {
         "intent_code": "SCHED:DOOR_SCHEDULE",
         "coarse_class": "SCHED",
-        "confidence": 0.9914937623733672,
+        "confidence": 1.0,
         "entities": {
           "door_id": "10125",
           "topic": "door 10125",
@@ -875,7 +896,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.920938491821289,
+    "processing_time_ms": 5.086183547973633,
     "success": true,
     "warnings": []
   },
@@ -888,7 +909,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.967947248349806,
+        "confidence": 1.0,
         "entities": {
           "floor": "Level 5",
           "topic": "drywall ceilings",
@@ -906,7 +927,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.149892807006836,
+    "processing_time_ms": 5.477190017700195,
     "success": true,
     "warnings": []
   },
@@ -919,7 +940,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9347740349601389,
+        "confidence": 1.0,
         "entities": {
           "topic": "exterior elevation",
           "submittal_topic": "exterior elevation"
@@ -935,7 +956,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.1839866638183594,
+    "processing_time_ms": 5.607128143310547,
     "success": true,
     "warnings": []
   },
@@ -948,7 +969,7 @@
       {
         "intent_code": "DRAW:DRAWING_MAP",
         "coarse_class": "DRAW",
-        "confidence": 0.24689959909639786,
+        "confidence": 0.0,
         "entities": {}
       }
     ],
@@ -958,7 +979,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0881423950195312,
+    "processing_time_ms": 4.478931427001953,
     "success": true,
     "warnings": []
   },
@@ -971,7 +992,7 @@
       {
         "intent_code": "STAT:SUBMITTAL_STATUS",
         "coarse_class": "STAT",
-        "confidence": 0.8144449765338976,
+        "confidence": 0.6666666666666666,
         "entities": {
           "submittal_topic": "Are there any magnetic door hold opens in the door hardware"
         }
@@ -985,7 +1006,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.1980533599853516,
+    "processing_time_ms": 5.561113357543945,
     "success": true,
     "warnings": []
   },
@@ -998,7 +1019,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9406257381089412,
+        "confidence": 1.0,
         "entities": {
           "topic": "thickness of the drywall in the residence",
           "submittal_topic": "thickness of the drywall in the residence"
@@ -1014,7 +1035,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0471343994140625,
+    "processing_time_ms": 5.934000015258789,
     "success": true,
     "warnings": []
   },
@@ -1027,7 +1048,7 @@
       {
         "intent_code": "SCHED:DOOR_SCHEDULE",
         "coarse_class": "SCHED",
-        "confidence": 0.9941844324454484,
+        "confidence": 1.0,
         "entities": {
           "door_id": "20110",
           "topic": "door 20110 x 2",
@@ -1045,7 +1066,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0027885437011719,
+    "processing_time_ms": 6.127834320068359,
     "success": true,
     "warnings": []
   },
@@ -1058,7 +1079,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9351179703936559,
+        "confidence": 1.0,
         "entities": {
           "topic": "cover plates for sprinkler head covers",
           "submittal_topic": "cover plates for sprinkler head covers"
@@ -1074,7 +1095,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.2269020080566406,
+    "processing_time_ms": 6.23321533203125,
     "success": true,
     "warnings": []
   },
@@ -1087,7 +1108,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.7067826889342034,
+        "confidence": 1.0,
         "entities": {
           "product_code": "A-2",
           "topic": "Unit layout for A2",
@@ -1105,7 +1126,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.9479522705078125,
+    "processing_time_ms": 4.948854446411133,
     "success": true,
     "warnings": []
   },
@@ -1118,7 +1139,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.8832776920051623,
+        "confidence": 1.0,
         "entities": {
           "ids.rfi": 1866,
           "topic": "RFI:1866",
@@ -1136,7 +1157,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.8137226104736328,
+    "processing_time_ms": 5.860090255737305,
     "success": true,
     "warnings": []
   },
@@ -1149,7 +1170,7 @@
       {
         "intent_code": "PROD:HARDWARE_GROUP",
         "coarse_class": "PROD",
-        "confidence": 0.5774213305954413,
+        "confidence": 0.16666666666666666,
         "entities": {}
       }
     ],
@@ -1159,7 +1180,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.8060932159423828,
+    "processing_time_ms": 5.759954452514648,
     "success": true,
     "warnings": []
   },
@@ -1172,7 +1193,7 @@
       {
         "intent_code": "ADMIN:DEFINITION",
         "coarse_class": "ADMIN",
-        "confidence": 0.3534246332030497,
+        "confidence": 0.16666666666666666,
         "entities": {}
       }
     ],
@@ -1182,7 +1203,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.9031295776367188,
+    "processing_time_ms": 5.001068115234375,
     "success": true,
     "warnings": []
   },
@@ -1195,7 +1216,7 @@
       {
         "intent_code": "LOC:PHYSICAL_LOCATION",
         "coarse_class": "LOC",
-        "confidence": 0.8890766799465064,
+        "confidence": 0.9523809523809523,
         "entities": {
           "floor": "Level 1"
         }
@@ -1209,7 +1230,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.123666763305664,
+    "processing_time_ms": 5.374431610107422,
     "success": true,
     "warnings": []
   },
@@ -1220,9 +1241,15 @@
     "created_at": "2024-02-02 18:54:48.124+00",
     "intents": [
       {
+        "intent_code": "PARAM:DIMENSIONS",
+        "coarse_class": "PARAM",
+        "confidence": 0.16666666666666666,
+        "entities": {}
+      },
+      {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.7447618996609091,
+        "confidence": 1.0,
         "entities": {
           "product_code": "GL-2",
           "topic": "more information on GL-2",
@@ -1235,12 +1262,13 @@
       "topic": "more information on GL-2",
       "submittal_topic": "more information on GL-2"
     },
-    "composition_mode": "SINGLE",
+    "composition_mode": "PARALLEL",
     "execution_order": [
+      1,
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0631084442138672,
+    "processing_time_ms": 8.610010147094727,
     "success": true,
     "warnings": []
   },
@@ -1253,23 +1281,30 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.8891244614345696,
+        "confidence": 1.0,
         "entities": {
           "topic": "finish activities",
           "submittal_topic": "finish activities"
         }
+      },
+      {
+        "intent_code": "DRAW:DRAWING_MAP",
+        "coarse_class": "DRAW",
+        "confidence": 0.0,
+        "entities": {}
       }
     ],
     "entities": {
       "topic": "finish activities",
       "submittal_topic": "finish activities"
     },
-    "composition_mode": "SINGLE",
+    "composition_mode": "PARALLEL",
     "execution_order": [
-      0
+      0,
+      1
     ],
     "join_keys": [],
-    "processing_time_ms": 1.4998912811279297,
+    "processing_time_ms": 9.28187370300293,
     "success": true,
     "warnings": []
   },
@@ -1282,7 +1317,7 @@
       {
         "intent_code": "LOC:PHYSICAL_LOCATION",
         "coarse_class": "LOC",
-        "confidence": 0.29983523606268836,
+        "confidence": 0.06397255231880866,
         "entities": {}
       }
     ],
@@ -1292,7 +1327,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.9920597076416016,
+    "processing_time_ms": 5.6781768798828125,
     "success": true,
     "warnings": []
   },
@@ -1303,15 +1338,15 @@
     "created_at": "2024-03-24 01:46:09.157+00",
     "intents": [
       {
-        "intent_code": "PARAM:DIMENSIONS",
-        "coarse_class": "PARAM",
-        "confidence": 0.22110720732802755,
+        "intent_code": "TRAN:TRANSLATE",
+        "coarse_class": "TRAN",
+        "confidence": 0.7170841079894263,
         "entities": {}
       },
       {
         "intent_code": "TRAN:TRANSLATE",
         "coarse_class": "TRAN",
-        "confidence": 0.9881647965153425,
+        "confidence": 0.9925504137480524,
         "entities": {
           "target_language": "es"
         }
@@ -1326,7 +1361,7 @@
       1
     ],
     "join_keys": [],
-    "processing_time_ms": 2.3560523986816406,
+    "processing_time_ms": 8.466958999633789,
     "success": true,
     "warnings": []
   },
@@ -1339,7 +1374,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9433923822546718,
+        "confidence": 1.0,
         "entities": {
           "topic": "thickness of the crane pad",
           "submittal_topic": "thickness of the crane pad"
@@ -1355,7 +1390,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0199546813964844,
+    "processing_time_ms": 5.102872848510742,
     "success": true,
     "warnings": []
   },
@@ -1368,7 +1403,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9565044413578332,
+        "confidence": 1.0,
         "entities": {
           "discipline": "Low Voltage",
           "topic": "maximum length of low voltage cabling",
@@ -1386,7 +1421,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.3799667358398438,
+    "processing_time_ms": 5.7010650634765625,
     "success": true,
     "warnings": []
   },
@@ -1399,7 +1434,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.9444578929825862,
+        "confidence": 1.0,
         "entities": {
           "topic": "control cabling of damper",
           "submittal_topic": "control cabling of damper"
@@ -1415,7 +1450,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0797977447509766,
+    "processing_time_ms": 6.009817123413086,
     "success": true,
     "warnings": []
   },
@@ -1428,7 +1463,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.888291317425094,
+        "confidence": 1.0,
         "entities": {
           "product_code": "A-1",
           "topic": "unit A1",
@@ -1446,7 +1481,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0831356048583984,
+    "processing_time_ms": 5.092144012451172,
     "success": true,
     "warnings": []
   },
@@ -1459,7 +1494,7 @@
       {
         "intent_code": "DOC:SUBMITTAL_RETRIEVE",
         "coarse_class": "DOC",
-        "confidence": 0.7228985646728976,
+        "confidence": 1.0,
         "entities": {
           "product_code": "G-1",
           "topic": "light type G1",
@@ -1477,7 +1512,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 1.0101795196533203,
+    "processing_time_ms": 5.816221237182617,
     "success": true,
     "warnings": []
   },
@@ -1490,7 +1525,7 @@
       {
         "intent_code": "PARAM:DIMENSIONS",
         "coarse_class": "PARAM",
-        "confidence": 0.4070441820733461,
+        "confidence": 0.16666666666666666,
         "entities": {}
       }
     ],
@@ -1500,7 +1535,7 @@
       0
     ],
     "join_keys": [],
-    "processing_time_ms": 0.9121894836425781,
+    "processing_time_ms": 4.699945449829102,
     "success": true,
     "warnings": []
   }

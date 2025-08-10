@@ -303,25 +303,17 @@ class IntentClassificationPipeline:
             if self.classifier:
                 try:
                     # Classify
-                    clf_result = self.classifier.predict(
-                        [clause.text],
-                        [entities.entities]
+                    intent_code, confidence = self.classifier.predict(
+                        clause.text,
+                        entities.entities
                     )
                     
-                    if clf_result['predictions']:
-                        pred = clf_result['predictions'][0]
-                        intent_code = pred['intent']
-                        confidence = pred['confidence']
-                        
-                        # Apply confidence calibration
-                        if self.confidence_calibrator:
-                            confidence = self.confidence_calibrator.calibrate_single(
-                                confidence,
-                                intent_code
-                            )
-                    else:
-                        intent_code = initial_intent
-                        confidence = initial_confidence
+                    # Apply confidence calibration if available
+                    if self.confidence_calibrator:
+                        confidence = self.confidence_calibrator.calibrate(
+                            intent_code,
+                            confidence
+                        )
                         
                 except Exception as e:
                     logger.warning(f"Classifier failed for clause {i}: {e}")
@@ -334,19 +326,17 @@ class IntentClassificationPipeline:
             
             # Apply KNN backstop if enabled
             if self.knn_backstop and self.config.use_knn_backstop:
-                knn_result = self.knn_backstop.predict(
+                knn_intent, knn_conf, knn_source = self.knn_backstop.get_intent_prediction(
                     clause.text,
                     entities.entities,
-                    intent_code,
-                    confidence
+                    (intent_code, confidence) if intent_code != "UNKNOWN:UNKNOWN" else None
                 )
                 
-                # Use KNN result based on mode
-                if knn_result.mode in ['knn_only', 'override']:
-                    intent_code = knn_result.intent_code
-                    confidence = knn_result.confidence
-                elif knn_result.mode == 'boost':
-                    confidence = knn_result.confidence
+                # Use KNN result if it's different or more confident
+                if knn_source != 'no_match':
+                    if intent_code == "UNKNOWN:UNKNOWN" or knn_conf > confidence + 0.2:
+                        intent_code = knn_intent
+                        confidence = knn_conf
             
             # Check minimum confidence
             if confidence < self.config.min_confidence_threshold:
