@@ -25,6 +25,7 @@ pytest-cov>=4.0.0
 python-dotenv>=1.0.0
 tqdm>=4.65.0
 joblib>=1.2.0
+networkx>=3.0
 
 # Visualization (optional, for analysis)
 matplotlib>=3.6.0
