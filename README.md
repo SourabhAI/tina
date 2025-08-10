@@ -1,4 +1,4 @@
-# TINA - Intent Classification System
+# TINA - Trunk Tools Intent Classification System
 
 A sophisticated intent classification system for construction industry queries using weak supervision, supervised learning, and advanced NLP techniques.
 
