@@ -1,89 +1,120 @@
 #!/usr/bin/env python3
 """
-Simple script to run the intent classifier on sample queries.
+Simple script to run the intent classifier on command line input.
 """
 
+import sys
 import json
-from intent_classifier.main import IntentClassificationPipeline
-
+from intent_classifier.main import create_pipeline, PipelineConfig
 
 def main():
-    """Run the classifier on sample queries."""
-    print("Initializing Intent Classification Pipeline...")
-    pipeline = IntentClassificationPipeline()
+    """Run classifier on user input."""
+    print("TINA Intent Classifier - Interactive Mode")
+    print("="*50)
+    print("Type your query (or 'quit' to exit)")
+    print("="*50)
     
-    # Sample queries to test
-    test_queries = [
-        "Show me the tile submittal and is it approved?",
-        "What spec section covers fire rated doors?",
-        "How many RFIs are still open?",
-        "Where is AHU-5 located on the mechanical drawings?",
-        "What is the status of submittal #232?",
-        "Link RFI 1838 to construction bulletin",
-        "Who is responsible for concrete testing?",
-        "What's the installation sequence for the curtain wall?",
-        "Show me shop drawings for structural steel on level 5",
-        "Define what a fire damper is",
-        "Translate this answer to Spanish",
-        "What are the dimensions of door 20110-2?",
-        "Which product replaces ACT-9?",
-        "Add new user to the project",
-        "Is this a question about construction?",
-        "Convert 100 square feet to square meters"
-    ]
+    # Create pipeline with all features
+    config = PipelineConfig(
+        use_spacy_splitter=True,
+        use_knn_backstop=True,
+        use_confidence_calibration=True,
+        enable_spell_correction=False
+    )
     
-    print(f"\nProcessing {len(test_queries)} test queries...\n")
-    print("=" * 80)
+    try:
+        pipeline = create_pipeline(config)
+        print("✓ Pipeline loaded successfully\n")
+    except Exception as e:
+        print(f"Error loading pipeline: {e}")
+        print("\nMake sure you have:")
+        print("1. Installed requirements: pip install -r requirements.txt")
+        print("2. Downloaded NLP models: python setup_nlp.py")
+        print("3. Trained models: python train_classifier.py")
+        sys.exit(1)
     
-    for i, query in enumerate(test_queries, 1):
-        print(f"\n[{i}] Query: {query}")
-        print("-" * 40)
-        
+    # Interactive loop
+    while True:
         try:
-            # Classify the query
+            # Get user input
+            query = input("\nQuery> ").strip()
+            
+            if query.lower() in ['quit', 'exit', 'q']:
+                print("\nGoodbye!")
+                break
+            
+            if not query:
+                continue
+            
+            # Classify
             result = pipeline.classify(query)
             
             # Display results
-            print(f"Composition: {result.composition.mode}")
-            print(f"Number of intents: {len(result.intents)}")
+            print("\nResults:")
+            print("-" * 30)
             
-            for j, intent in enumerate(result.intents):
-                print(f"\n  Intent {j+1}:")
-                print(f"    Code: {intent.intent_code}")
-                print(f"    Confidence: {intent.confidence:.2f}")
+            # Intents
+            for i, intent in enumerate(result.intents):
+                print(f"Intent {i+1}: {intent.intent_code}")
+                print(f"  Confidence: {intent.confidence:.3f}")
+                if hasattr(intent, 'parameters') and intent.parameters:
+                    print(f"  Parameters: {intent.parameters}")
+            
+            # Composition
+            if len(result.intents) > 1:
+                print(f"\nComposition: {result.composition.mode}")
+                print(f"Execution Order: {result.composition.execution_order}")
+            
+            # Entities
+            all_entities = {}
+            for intent in result.intents:
                 if intent.entities:
-                    print(f"    Entities: {intent.entities}")
-                if intent.routing_hints.get('tools'):
-                    print(f"    Tools: {intent.routing_hints['tools']}")
+                    all_entities.update(intent.entities)
             
-            # Show composition details for multi-intent
-            if len(result.intents) > 1 and result.composition.join_keys:
-                print(f"\n  Join Keys:")
-                for join_key in result.composition.join_keys:
-                    print(f"    {join_key.key}: from step {join_key.from_step} to step {join_key.to_step}")
-        
+            if all_entities:
+                print(f"\nExtracted Entities:")
+                for entity_type, value in all_entities.items():
+                    print(f"  {entity_type}: {value}")
+            
+        except KeyboardInterrupt:
+            print("\n\nInterrupted. Goodbye!")
+            break
         except Exception as e:
-            print(f"  ERROR: {e}")
-        
-        print("=" * 80)
+            print(f"Error: {e}")
     
-    print("\nClassification complete!")
-    
-    # Save results to file
-    print("\nSaving results to 'classification_results.json'...")
-    results = []
-    for query in test_queries[:5]:  # Save first 5 for brevity
-        result = pipeline.classify(query)
-        results.append({
-            "query": query,
-            "result": result.dict()
-        })
-    
-    with open('classification_results.json', 'w') as f:
-        json.dump(results, f, indent=2)
-    
-    print("Done!")
-
+    # Cleanup
+    pipeline.shutdown()
 
 if __name__ == "__main__":
-    main()
+    # Check for command line argument
+    if len(sys.argv) > 1:
+        # Process single query from command line
+        query = " ".join(sys.argv[1:])
+        
+        config = PipelineConfig(
+            use_spacy_splitter=True,
+            use_knn_backstop=True,
+            use_confidence_calibration=True
+        )
+        
+        pipeline = create_pipeline(config)
+        result = pipeline.classify(query)
+        
+        # Output as JSON
+        output = {
+            "query": query,
+            "intents": [
+                {
+                    "code": intent.intent_code,
+                    "confidence": intent.confidence
+                }
+                for intent in result.intents
+            ],
+            "composition": result.composition.mode
+        }
+        
+        print(json.dumps(output, indent=2))
+        pipeline.shutdown()
+    else:
+        # Interactive mode
+        main()
