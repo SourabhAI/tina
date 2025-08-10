@@ -1,0 +1,419 @@
+{
+  "training_stats": {
+    "total_examples": 340,
+    "unique_intents": 21,
+    "label_distribution": {
+      "PROD:PRODUCT_LOOKUP": 22,
+      "DOC:SUBMITTAL_RETRIEVE": 219,
+      "SCHED:ACTIVITY_SEQUENCE": 13,
+      "DOC:RFI_RETRIEVE": 7,
+      "ADMIN:VENDOR_LIST": 2,
+      "DOC:CB_RETRIEVE": 9,
+      "ADMIN:PERSONNEL": 5,
+      "PROD:HARDWARE_GROUP": 9,
+      "SCHED:DOOR_SCHEDULE": 4,
+      "STAT:SUBMITTAL_STATUS": 8,
+      "PROD:MATERIAL_SPEC": 1,
+      "LOC:PHYSICAL_LOCATION": 9,
+      "PROD:EQUIPMENT_SPEC": 1,
+      "DRAW:DRAWING_MAP": 7,
+      "TRAN:TRANSLATE": 5,
+      "ADMIN:DEFINITION": 5,
+      "SPEC:SECTION_MAP": 9,
+      "STAT:RFI_STATUS": 2,
+      "DRAW:DRAWING_RETRIEVE": 1,
+      "PARAM:DIMENSIONS": 1,
+      "SPEC:REQUIREMENTS": 1
+    },
+    "avg_text_length": 9.070588235294117
+  },
+  "intent_examples": {
+    "PROD:PRODUCT_LOOKUP": [
+      {
+        "text": "Where is AHU-5 located on site? This information should be available in the mechanical schedules.",
+        "confidence": 0.75,
+        "entities": [
+          "product_code",
+          "discipline"
+        ]
+      },
+      {
+        "text": "what material is CT-4",
+        "confidence": 0.75,
+        "entities": [
+          "product_code"
+        ]
+      },
+      {
+        "text": "Which grille is WEG1?",
+        "confidence": 0.75,
+        "entities": [
+          "product_code"
+        ]
+      }
+    ],
+    "DOC:SUBMITTAL_RETRIEVE": [
+      {
+        "text": "What maintenance materials should be provided for ACT-8",
+        "confidence": 0.9,
+        "entities": [
+          "product_code",
+          "topic",
+          "submittal_topic"
+        ]
+      },
+      {
+        "text": "What maintenance materials should be provided for ACT-13",
+        "confidence": 0.9,
+        "entities": [
+          "product_code",
+          "topic",
+          "submittal_topic"
+        ]
+      },
+      {
+        "text": "What does the accordion door spec say about warranty on the Won-Door?",
+        "confidence": 0.9,
+        "entities": [
+          "topic",
+          "submittal_topic"
+        ]
+      }
+    ],
+    "SCHED:ACTIVITY_SEQUENCE": [
+      {
+        "text": "when is the terrazzo flooring activity complete on Exhibit level?",
+        "confidence": 0.75,
+        "entities": []
+      },
+      {
+        "text": "Window schedule",
+        "confidence": 0.75,
+        "entities": []
+      },
+      {
+        "text": "what date does the FADE plaster wall tie-in need to be complete by in the Atrium",
+        "confidence": 0.75,
+        "entities": [
+          "area"
+        ]
+      }
+    ],
+    "DOC:RFI_RETRIEVE": [
+      {
+        "text": "What RFI has glass railing interface with fin tube ",
+        "confidence": 0.8,
+        "entities": []
+      },
+      {
+        "text": "what rfi's were submitted in the month of September",
+        "confidence": 0.8,
+        "entities": []
+      },
+      {
+        "text": "What rfi are there ",
+        "confidence": 0.8,
+        "entities": []
+      }
+    ],
+    "ADMIN:VENDOR_LIST": [
+      {
+        "text": "when is the project expected to be substantially complete per the schedule?",
+        "confidence": 0.75,
+        "entities": []
+      },
+      {
+        "text": "Exterior door submital packages complete",
+        "confidence": 0.75,
+        "entities": []
+      }
+    ],
+    "DOC:CB_RETRIEVE": [
+      {
+        "text": "EF-13 was recently added to the mechanical schedule drawings. What was the construction bulletin that EF-13 was added in?",
+        "confidence": 0.9,
+        "entities": [
+          "product_code",
+          "discipline"
+        ]
+      },
+      {
+        "text": "what CB will the changes resulting from RFI 1939 be captured in",
+        "confidence": 0.9,
+        "entities": [
+          "ids.rfi"
+        ]
+      },
+      {
+        "text": "What CB will the updates from RFI #1838 be captured in?",
+        "confidence": 0.9,
+        "entities": [
+          "ids.rfi"
+        ]
+      }
+    ],
+    "ADMIN:PERSONNEL": [
+      {
+        "text": "Who is installing cabinets in work room",
+        "confidence": 0.8,
+        "entities": []
+      },
+      {
+        "text": "Who is installing the shelves in the package room",
+        "confidence": 0.8,
+        "entities": []
+      },
+      {
+        "text": "Who is providing the keys and cores on the project?",
+        "confidence": 0.8,
+        "entities": []
+      }
+    ],
+    "PROD:HARDWARE_GROUP": [
+      {
+        "text": "im looking to hook up automatic doors to power. which doors and door hardware groups have power supplies ",
+        "confidence": 0.8,
+        "entities": []
+      },
+      {
+        "text": "What type of hardware goes on a P8 door",
+        "confidence": 0.8,
+        "entities": [
+          "product_code"
+        ]
+      },
+      {
+        "text": "what door openings use door hardware group 201",
+        "confidence": 0.8,
+        "entities": []
+      }
+    ],
+    "SCHED:DOOR_SCHEDULE": [
+      {
+        "text": "Show me the hardware schedule for door 20110",
+        "confidence": 0.95,
+        "entities": [
+          "door_id",
+          "topic",
+          "submittal_topic"
+        ]
+      },
+      {
+        "text": "Show me the hardware schedule for door 30103",
+        "confidence": 0.95,
+        "entities": [
+          "door_id",
+          "topic",
+          "submittal_topic"
+        ]
+      },
+      {
+        "text": "Does door number 20110 have an auto operator in the hardware schedule? ",
+        "confidence": 0.9,
+        "entities": []
+      }
+    ],
+    "STAT:SUBMITTAL_STATUS": [
+      {
+        "text": "What is the status of submittal 232?",
+        "confidence": 0.9000000000000001,
+        "entities": [
+          "ids.submittal",
+          "topic",
+          "submittal_topic"
+        ]
+      },
+      {
+        "text": "what is the approved grout color for GLT-2 tile",
+        "confidence": 0.8,
+        "entities": [
+          "product_code",
+          "topic",
+          "submittal_topic"
+        ]
+      },
+      {
+        "text": "Has the submittal for the lobby amenity fireplace been approved?",
+        "confidence": 0.8,
+        "entities": [
+          "topic",
+          "submittal_topic"
+        ]
+      }
+    ],
+    "PROD:MATERIAL_SPEC": [
+      {
+        "text": "What material is door # 30101-1",
+        "confidence": 0.75,
+        "entities": [
+          "door_id"
+        ]
+      }
+    ],
+    "LOC:PHYSICAL_LOCATION": [
+      {
+        "text": "Where are bird deterrent systems installed? ",
+        "confidence": 0.7,
+        "entities": []
+      },
+      {
+        "text": "Where is preserved moss walls installed? ",
+        "confidence": 0.7,
+        "entities": []
+      },
+      {
+        "text": "Where in the documents do they discuss Well St underpass smoke exhaust",
+        "confidence": 0.7,
+        "entities": []
+      }
+    ],
+    "PROD:EQUIPMENT_SPEC": [
+      {
+        "text": "what spec number is the refrigerant monitoring system located under?",
+        "confidence": 0.75,
+        "entities": []
+      }
+    ],
+    "DRAW:DRAWING_MAP": [
+      {
+        "text": "Where in the mechanical controls drawings does it discuss kitchen hoods?",
+        "confidence": 0.85,
+        "entities": [
+          "discipline"
+        ]
+      },
+      {
+        "text": "Which specificaiton section does backflow preventers fall under?",
+        "confidence": 0.85,
+        "entities": []
+      },
+      {
+        "text": "Which spec section cover jet fans",
+        "confidence": 0.85,
+        "entities": []
+      }
+    ],
+    "TRAN:TRANSLATE": [
+      {
+        "text": "What does EM stand for in electrical drawings? Give the answer in spanish.",
+        "confidence": 0.95,
+        "entities": [
+          "discipline",
+          "topic",
+          "submittal_topic",
+          "target_language"
+        ]
+      },
+      {
+        "text": "What bolts are used on the balconies?  Please translate to spanish.",
+        "confidence": 0.95,
+        "entities": [
+          "target_language"
+        ]
+      },
+      {
+        "text": "what bolts are used on the balconies? please translate to arabic.",
+        "confidence": 0.95,
+        "entities": [
+          "target_language"
+        ]
+      }
+    ],
+    "ADMIN:DEFINITION": [
+      {
+        "text": "What's the total square footage of the retail area ",
+        "confidence": 0.7,
+        "entities": []
+      },
+      {
+        "text": "What's the total air volume of the building?",
+        "confidence": 0.7,
+        "entities": []
+      },
+      {
+        "text": "What's the flooring type in the penthouse?",
+        "confidence": 0.7,
+        "entities": [
+          "area"
+        ]
+      }
+    ],
+    "SPEC:SECTION_MAP": [
+      {
+        "text": "what specification section references roof pavers",
+        "confidence": 0.9000000000000001,
+        "entities": []
+      },
+      {
+        "text": "What spec section covers IPTV?",
+        "confidence": 0.8,
+        "entities": []
+      },
+      {
+        "text": "What spec section references protecting plumbing drains and fixtures?",
+        "confidence": 0.8,
+        "entities": [
+          "discipline"
+        ]
+      }
+    ],
+    "STAT:RFI_STATUS": [
+      {
+        "text": "What is the status of RFI 4?",
+        "confidence": 0.95,
+        "entities": [
+          "ids.rfi",
+          "topic",
+          "submittal_topic"
+        ]
+      },
+      {
+        "text": "what is the status of RFI #1837",
+        "confidence": 0.95,
+        "entities": [
+          "ids.rfi",
+          "topic",
+          "submittal_topic"
+        ]
+      }
+    ],
+    "DRAW:DRAWING_RETRIEVE": [
+      {
+        "text": "What mechanical controls drawing review generator startup sequences?",
+        "confidence": 0.85,
+        "entities": [
+          "discipline"
+        ]
+      }
+    ],
+    "PARAM:DIMENSIONS": [
+      {
+        "text": "What the wire size in the retail ",
+        "confidence": 0.7,
+        "entities": []
+      }
+    ],
+    "SPEC:REQUIREMENTS": [
+      {
+        "text": "Is a smoke baffle mockup required in the specifications? ",
+        "confidence": 0.8,
+        "entities": []
+      }
+    ]
+  },
+  "entity_coverage": {
+    "product_code": 63,
+    "discipline": 29,
+    "topic": 226,
+    "submittal_topic": 233,
+    "floor": 7,
+    "area": 10,
+    "ids.rfi": 13,
+    "door_id": 5,
+    "ids.submittal": 1,
+    "date_range": 6,
+    "spec_section": 2,
+    "target_language": 5,
+    "ids.cb": 1
+  }
+}

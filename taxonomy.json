@@ -1,0 +1,1541 @@
+{
+  "taxonomy_id": "construction-intents-v1",
+  "taxonomy_version": "1.0.0",
+  "schema": "taxonomy/1.4.0",
+  "generated_at": "2025-08-09T21:40:58.197166Z",
+  "description": "Intent taxonomy for construction Q&A routing with fixed 16 top-level classes, representative subclasses, and allowed chains.",
+  "entities_schema": [
+    {
+      "key": "ids.rfi",
+      "type": "integer",
+      "example": 1838
+    },
+    {
+      "key": "ids.cb",
+      "type": "integer",
+      "example": 309
+    },
+    {
+      "key": "ids.submittal",
+      "type": "integer",
+      "example": 232
+    },
+    {
+      "key": "spec_section",
+      "type": "string",
+      "pattern": "\\b\\d{2}\\s?\\d{2}\\s?\\d{2}\\b",
+      "example": "10 22 33"
+    },
+    {
+      "key": "product_code",
+      "type": "string",
+      "pattern": "^[A-Z]{1,4}-\\d{1,3}$",
+      "example": "ACT-9"
+    },
+    {
+      "key": "door_id",
+      "type": "string",
+      "pattern": "^\\d{4,5}(-\\d)?$",
+      "example": "20110-2"
+    },
+    {
+      "key": "floor",
+      "type": "string",
+      "example": "Level 5"
+    },
+    {
+      "key": "area",
+      "type": "string",
+      "example": "Atrium"
+    },
+    {
+      "key": "discipline",
+      "type": "string",
+      "example": "Mechanical"
+    },
+    {
+      "key": "topic",
+      "type": "string",
+      "example": "wireless access points"
+    },
+    {
+      "key": "submittal_topic",
+      "type": "string",
+      "example": "tile"
+    },
+    {
+      "key": "date_range",
+      "type": "string",
+      "example": "2024-09"
+    },
+    {
+      "key": "target_language",
+      "type": "string",
+      "enum": [
+        "en",
+        "es",
+        "ar"
+      ],
+      "example": "es"
+    },
+    {
+      "key": "answer_text",
+      "type": "string",
+      "description": "Used only for translation handoff"
+    }
+  ],
+  "routing_defaults": {
+    "DOC": {
+      "policies": {
+        "freshness": "latest_only"
+      }
+    },
+    "SPEC": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "STAT": {
+      "policies": {
+        "freshness": "latest_only"
+      }
+    },
+    "LINK": {
+      "policies": {
+        "freshness": "latest_only"
+      }
+    },
+    "COUNT": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "RESP": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "SCHED": {
+      "policies": {
+        "freshness": "latest_only"
+      }
+    },
+    "DRAW": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "LOC": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "DEF": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "TRAN": {
+      "policies": {}
+    },
+    "PARAM": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "PROD": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "ADMIN": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "QRY": {
+      "policies": {
+        "freshness": "any"
+      }
+    },
+    "UNIT": {
+      "policies": {
+        "freshness": "any"
+      }
+    }
+  },
+  "classes": [
+    {
+      "code": "DOC",
+      "name": "Document Retrieval",
+      "description": "Fetch a specific document or structured document slice.",
+      "subclasses": [
+        {
+          "code": "DOC:SUBMITTAL_RETRIEVE",
+          "description": "Locate and return a submittal package by topic, ID, or vendor.",
+          "required_entities": [
+            "submittal_topic"
+          ],
+          "optional_entities": [
+            "ids.submittal",
+            "discipline",
+            "area",
+            "floor"
+          ],
+          "routing_hints": {
+            "tools": [
+              "SubmittalSearch"
+            ],
+            "few_shot_id": "doc_retrieval_v2"
+          },
+          "example_triggers": [
+            "show me the tile submittal",
+            "submittal for RO skid"
+          ]
+        },
+        {
+          "code": "DOC:SHOP_DRAWING_RETRIEVE",
+          "description": "Retrieve shop drawings by trade/topic/location.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "discipline",
+            "area",
+            "floor"
+          ],
+          "routing_hints": {
+            "tools": [
+              "DocSearch"
+            ],
+            "few_shot_id": "doc_retrieval_v2"
+          },
+          "example_triggers": [
+            "show me the artwork shop drawings",
+            "shop drawings for mechanical piping on 32nd floor"
+          ]
+        },
+        {
+          "code": "DOC:RFI_RETRIEVE",
+          "description": "Open an RFI by ID or topic.",
+          "required_entities": [],
+          "optional_entities": [
+            "ids.rfi",
+            "topic",
+            "date_range"
+          ],
+          "routing_hints": {
+            "tools": [
+              "RfiSearch"
+            ],
+            "few_shot_id": "doc_retrieval_v2"
+          },
+          "example_triggers": [
+            "show me RFI #500",
+            "is there an electrical RFI?"
+          ]
+        },
+        {
+          "code": "DOC:CB_RETRIEVE",
+          "description": "Open a construction bulletin by ID.",
+          "required_entities": [],
+          "optional_entities": [
+            "ids.cb",
+            "topic"
+          ],
+          "routing_hints": {
+            "tools": [
+              "CbSearch"
+            ],
+            "few_shot_id": "doc_retrieval_v2"
+          },
+          "example_triggers": [
+            "open CB 309"
+          ]
+        },
+        {
+          "code": "DOC:FORM_RETRIEVE",
+          "description": "Fetch forms/templates (e.g., blank PTP PDF).",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "DocSearch"
+            ],
+            "few_shot_id": "doc_retrieval_v2"
+          },
+          "example_triggers": [
+            "provide the blank PTP PDF"
+          ]
+        },
+        {
+          "code": "DOC:STANDARD_RETRIEVE",
+          "description": "Fetch project/company standards (e.g., bp-104-3).",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "DocSearch"
+            ],
+            "few_shot_id": "doc_retrieval_v2"
+          },
+          "example_triggers": [
+            "pull up standard bp-104-3"
+          ]
+        },
+        {
+          "code": "DOC:RENDERING_RETRIEVE",
+          "description": "Fetch renderings/visuals by topic.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "DocSearch"
+            ],
+            "few_shot_id": "doc_retrieval_v2"
+          },
+          "example_triggers": [
+            "I need renderings for the FLOE sculpture"
+          ]
+        },
+        {
+          "code": "DOC:PLAN_RETRIEVE",
+          "description": "Open a plan/sheet or plan subset (e.g., photolight plan, riser).",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "discipline",
+            "area"
+          ],
+          "routing_hints": {
+            "tools": [
+              "DrawingIndex"
+            ],
+            "few_shot_id": "drawing_lookup_v1"
+          },
+          "example_triggers": [
+            "show me the electrical riser diagram",
+            "pull up photolight plan"
+          ]
+        },
+        {
+          "code": "DOC:SCHEDULE_DOC_RETRIEVE",
+          "description": "Retrieve a schedule document (e.g., hardware schedule, window schedule).",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "door_id"
+          ],
+          "routing_hints": {
+            "tools": [
+              "DocSearch"
+            ],
+            "few_shot_id": "doc_retrieval_v2"
+          },
+          "example_triggers": [
+            "show me the hardware schedule for door 20110-2",
+            "window schedule"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "SPEC",
+      "name": "Specifications Lookup & Rules",
+      "description": "Map topics to CSI sections and answer normative spec requirements.",
+      "subclasses": [
+        {
+          "code": "SPEC:SECTION_MAP",
+          "description": "Map a product/system to its CSI spec section.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "SpecIndex",
+              "VectorSearch"
+            ],
+            "few_shot_id": "spec_lookup_v1"
+          },
+          "example_triggers": [
+            "what spec section covers IPTV?",
+            "which spec section cover jet fans"
+          ]
+        },
+        {
+          "code": "SPEC:REQUIREMENT_RULE",
+          "description": "Retrieve requirement language from specs/drawings.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "spec_section"
+          ],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "rule_lookup_v1"
+          },
+          "example_triggers": [
+            "do louvers need to be caulked?",
+            "what are level 5 finish requirements"
+          ]
+        },
+        {
+          "code": "SPEC:CODE_REQUIREMENT",
+          "description": "Code/ADA/life-safety requirements referenced in project docs.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "code_lookup_v1"
+          },
+          "example_triggers": [
+            "ADA clearance requirements",
+            "emergency power requirements for dampers"
+          ]
+        },
+        {
+          "code": "SPEC:INSTALLATION_REQUIREMENT",
+          "description": "Mounting heights, labeling, installation procedures.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "install_req_v1"
+          },
+          "example_triggers": [
+            "mounting height for fire extinguisher cabinets"
+          ]
+        },
+        {
+          "code": "SPEC:WARRANTY_REQUIREMENT",
+          "description": "Warranty durations and conditions from specs.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "spec_section"
+          ],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "warranty_v1"
+          },
+          "example_triggers": [
+            "What's the required warranty duration for HWG-3?"
+          ]
+        },
+        {
+          "code": "SPEC:MAINTENANCE_REQUIREMENT",
+          "description": "Attic stock/extra materials/maintenance deliverables.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "attic_stock_v1"
+          },
+          "example_triggers": [
+            "maintenance materials for ACT-12",
+            "attic stock for rooftop irrigation"
+          ]
+        },
+        {
+          "code": "SPEC:MOCKUP_REQUIREMENT",
+          "description": "Mock-up requirements by division/system.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "mockup_req_v1"
+          },
+          "example_triggers": [
+            "which divisions require mockups?",
+            "mockup for glass railings?"
+          ]
+        },
+        {
+          "code": "SPEC:MATERIAL_PROPERTY",
+          "description": "Material/color/finish specified for a tag or product code.",
+          "required_entities": [
+            "product_code"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "material_prop_v1"
+          },
+          "example_triggers": [
+            "What color is AP-1?",
+            "What material is ACT-9?"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "STAT",
+      "name": "Status",
+      "description": "Status of RFIs, submittals, observations, punch, and change documents.",
+      "subclasses": [
+        {
+          "code": "STAT:RFI_STATUS",
+          "description": "Status of an RFI.",
+          "required_entities": [
+            "ids.rfi"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "StatusAPI"
+            ],
+            "few_shot_id": "status_v1"
+          },
+          "example_triggers": [
+            "what is the status of RFI #1837"
+          ]
+        },
+        {
+          "code": "STAT:SUBMITTAL_STATUS",
+          "description": "Status of a submittal.",
+          "required_entities": [
+            "ids.submittal"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "StatusAPI"
+            ],
+            "few_shot_id": "status_v1"
+          },
+          "example_triggers": [
+            "has the door submittal been approved?"
+          ]
+        },
+        {
+          "code": "STAT:OBSERVATION_STATUS",
+          "description": "Status of an observation.",
+          "required_entities": [],
+          "optional_entities": [
+            "topic"
+          ],
+          "routing_hints": {
+            "tools": [
+              "StatusAPI"
+            ],
+            "few_shot_id": "status_v1"
+          },
+          "example_triggers": [
+            "status of observation 2629"
+          ]
+        },
+        {
+          "code": "STAT:PUNCH_STATUS",
+          "description": "Status of a punch item.",
+          "required_entities": [],
+          "optional_entities": [
+            "topic"
+          ],
+          "routing_hints": {
+            "tools": [
+              "StatusAPI"
+            ],
+            "few_shot_id": "status_v1"
+          },
+          "example_triggers": [
+            "status of punch list item 752"
+          ]
+        },
+        {
+          "code": "STAT:CHANGE_DOC_STATUS",
+          "description": "Status of a change document/CB.",
+          "required_entities": [
+            "ids.cb"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "StatusAPI"
+            ],
+            "few_shot_id": "status_v1"
+          },
+          "example_triggers": [
+            "is CB 309 approved?"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "LINK",
+      "name": "Lineage / Cross\u2011Artifact Mapping",
+      "description": "Map relationships between RFIs, CBs, doors, hardware groups, and submittals.",
+      "subclasses": [
+        {
+          "code": "LINK:RFI_TO_CB",
+          "description": "Find CB created from a given RFI.",
+          "required_entities": [
+            "ids.rfi"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "RfiCbGraph"
+            ],
+            "few_shot_id": "lineage_v1"
+          },
+          "example_triggers": [
+            "what CB will the updates from RFI #1838 be captured in?"
+          ]
+        },
+        {
+          "code": "LINK:CB_TO_RFI",
+          "description": "Find RFI that led to a given CB.",
+          "required_entities": [
+            "ids.cb"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "RfiCbGraph"
+            ],
+            "few_shot_id": "lineage_v1"
+          },
+          "example_triggers": [
+            "CB 309 was issued as a result of what RFI?"
+          ]
+        },
+        {
+          "code": "LINK:DOOR_TO_HARDWARE_GROUP",
+          "description": "Find a door\u2019s hardware group.",
+          "required_entities": [
+            "door_id"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "HardwareScheduleIndex"
+            ],
+            "few_shot_id": "door_hw_v1"
+          },
+          "example_triggers": [
+            "what hardware group is door 20502-2"
+          ]
+        },
+        {
+          "code": "LINK:HARDWARE_GROUP_TO_DOORS",
+          "description": "List doors using a hardware group.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "HardwareScheduleIndex"
+            ],
+            "few_shot_id": "door_hw_v1"
+          },
+          "example_triggers": [
+            "what door openings use door hardware group 303"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "COUNT",
+      "name": "Counting / Aggregation",
+      "description": "Counts of items by type, location, status, or discipline.",
+      "subclasses": [
+        {
+          "code": "COUNT:BY_TYPE",
+          "description": "Count by type/topic (units, windows, RFIs, filters).",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "QuantityDB",
+              "VectorSearch"
+            ],
+            "few_shot_id": "count_v1"
+          },
+          "example_triggers": [
+            "how many filters does JCI owe",
+            "how many RFIs have been produced"
+          ]
+        },
+        {
+          "code": "COUNT:BY_LOCATION",
+          "description": "Count constrained to a location/floor/unit.",
+          "required_entities": [
+            "topic",
+            "floor"
+          ],
+          "optional_entities": [
+            "area"
+          ],
+          "routing_hints": {
+            "tools": [
+              "QuantityDB",
+              "VectorSearch"
+            ],
+            "few_shot_id": "count_v1"
+          },
+          "example_triggers": [
+            "how many B6 light fixtures do we have",
+            "how many units on 5th floor"
+          ]
+        },
+        {
+          "code": "COUNT:BY_STATUS",
+          "description": "Count filtered by a status (open/approved/etc.).",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "QuantityDB",
+              "StatusAPI"
+            ],
+            "few_shot_id": "count_v1"
+          },
+          "example_triggers": [
+            "how many open observations are there",
+            "how many change documents are open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "RESP",
+      "name": "Ownership / Responsibility",
+      "description": "Identify responsible party or scope of work.",
+      "subclasses": [
+        {
+          "code": "RESP:PARTY_RESPONSIBLE",
+          "description": "Find who is responsible for an item or task.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "ownership_v1"
+          },
+          "example_triggers": [
+            "Who is providing the keys and cores",
+            "Which subcontractor is responsible for handicap push buttons"
+          ]
+        },
+        {
+          "code": "RESP:SCOPE_OF_WORK",
+          "description": "Retrieve a trade\u2019s scope of work.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "scope_v1"
+          },
+          "example_triggers": [
+            "what's the plumbers scope of work",
+            "what is the framer's scope of work"
+          ]
+        },
+        {
+          "code": "RESP:CONTACT_INFO",
+          "description": "Get contact/role metadata.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "DirectorySearch"
+            ],
+            "few_shot_id": "ownership_v1"
+          },
+          "example_triggers": [
+            "Who is the superintendent"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "SCHED",
+      "name": "Schedule / Timing",
+      "description": "Start, finish, duration, predecessors, and milestone dates.",
+      "subclasses": [
+        {
+          "code": "SCHED:ACTIVITY_START",
+          "description": "When an activity starts.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "area"
+          ],
+          "routing_hints": {
+            "tools": [
+              "ScheduleAPI"
+            ],
+            "few_shot_id": "schedule_v1"
+          },
+          "example_triggers": [
+            "when is the metal panel ceiling installation supposed to start in the Atrium"
+          ]
+        },
+        {
+          "code": "SCHED:ACTIVITY_FINISH",
+          "description": "When an activity completes.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "area"
+          ],
+          "routing_hints": {
+            "tools": [
+              "ScheduleAPI"
+            ],
+            "few_shot_id": "schedule_v1"
+          },
+          "example_triggers": [
+            "when is terrazzo supposed to be complete on street level in the Atrium"
+          ]
+        },
+        {
+          "code": "SCHED:DURATION",
+          "description": "Duration of an activity.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "area"
+          ],
+          "routing_hints": {
+            "tools": [
+              "ScheduleAPI"
+            ],
+            "few_shot_id": "schedule_v1"
+          },
+          "example_triggers": [
+            "how long is the metal panel installation duration in exhibit prefunction"
+          ]
+        },
+        {
+          "code": "SCHED:PREDECESSOR",
+          "description": "Predecessor/successor relationships.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "ScheduleAPI"
+            ],
+            "few_shot_id": "schedule_v1"
+          },
+          "example_triggers": [
+            "what activity needs to be completed before metal panel ceiling in sequence AC5.2"
+          ]
+        },
+        {
+          "code": "SCHED:MILESTONE_DATE",
+          "description": "Project milestone date (e.g., substantial completion).",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "ScheduleAPI"
+            ],
+            "few_shot_id": "schedule_v1"
+          },
+          "example_triggers": [
+            "when is the project expected to be substantially complete per the schedule?"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "DRAW",
+      "name": "Drawing & Detail Navigation",
+      "description": "Find which drawing/detail/schedule contains a given item.",
+      "subclasses": [
+        {
+          "code": "DRAW:DRAWING_FIND",
+          "description": "Which drawing/sheet shows X.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "discipline"
+          ],
+          "routing_hints": {
+            "tools": [
+              "DrawingIndex"
+            ],
+            "few_shot_id": "drawing_lookup_v1"
+          },
+          "example_triggers": [
+            "which architectural detail shows the water feature",
+            "what drawing does NHLP1B2 appear on"
+          ]
+        },
+        {
+          "code": "DRAW:DETAIL_FIND",
+          "description": "Find a specific detail reference for a topic.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "DrawingIndex"
+            ],
+            "few_shot_id": "drawing_lookup_v1"
+          },
+          "example_triggers": [
+            "what's the detail for gyp concrete in the units?"
+          ]
+        },
+        {
+          "code": "DRAW:SCHEDULE_FIND",
+          "description": "Find which drawing has a given schedule content.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "discipline"
+          ],
+          "routing_hints": {
+            "tools": [
+              "DrawingIndex"
+            ],
+            "few_shot_id": "drawing_lookup_v1"
+          },
+          "example_triggers": [
+            "which drawings include panel schedules with emergency power"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "LOC",
+      "name": "Location / Placement",
+      "description": "Where an asset/system is installed or located.",
+      "subclasses": [
+        {
+          "code": "LOC:ASSET_LOCATION",
+          "description": "Where a tagged asset is located.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "area",
+            "floor"
+          ],
+          "routing_hints": {
+            "tools": [
+              "AssetDB",
+              "VectorSearch"
+            ],
+            "few_shot_id": "asset_loc_v1"
+          },
+          "example_triggers": [
+            "Where is AHU-5 located on site?"
+          ]
+        },
+        {
+          "code": "LOC:INSTALLATION_LOCATIONS",
+          "description": "Locations where a system is required/installed.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "area",
+            "floor"
+          ],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "asset_loc_v1"
+          },
+          "example_triggers": [
+            "Where are bird deterrent systems installed?"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "DEF",
+      "name": "Definitions & Abbreviations",
+      "description": "Explain codes, tags, and abbreviations; compare similar items.",
+      "subclasses": [
+        {
+          "code": "DEF:SYMBOL_MEANING",
+          "description": "What a drawing/spec symbol means.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "discipline"
+          ],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "definition_v1"
+          },
+          "example_triggers": [
+            "What does DS stand for. Electrical symbol"
+          ]
+        },
+        {
+          "code": "DEF:CODE_MEANING",
+          "description": "Explain a tag like DF-4, WEG1, etc.",
+          "required_entities": [
+            "product_code"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "definition_v1"
+          },
+          "example_triggers": [
+            "What is DF-4?",
+            "What is WEG1 grille?"
+          ]
+        },
+        {
+          "code": "DEF:COMPARE_ITEMS",
+          "description": "Explain difference between two codes/items.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "definition_v1"
+          },
+          "example_triggers": [
+            "What is the difference between GL-2 and GL-5?"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "TRAN",
+      "name": "Translate",
+      "description": "Translate the answer/output to a target language.",
+      "subclasses": [
+        {
+          "code": "TRAN:TRANSLATE_ANSWER",
+          "description": "Post-process translation of the generated answer.",
+          "required_entities": [
+            "target_language"
+          ],
+          "optional_entities": [
+            "answer_text"
+          ],
+          "routing_hints": {
+            "tools": [
+              "Translator"
+            ],
+            "few_shot_id": "translate_v1"
+          },
+          "example_triggers": [
+            "translate to Spanish",
+            "please translate to Arabic"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PARAM",
+      "name": "Numeric Parameters / Design Values",
+      "description": "Ask for a numeric property (thickness, flow, pressure, power, temp, dimensions, elevation, weight).",
+      "subclasses": [
+        {
+          "code": "PARAM:THICKNESS",
+          "description": "Thickness queries.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "area"
+          ],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "param_v1"
+          },
+          "example_triggers": [
+            "How thick is the drywall in the residence?"
+          ]
+        },
+        {
+          "code": "PARAM:FLOW_RATE",
+          "description": "Flow rate queries.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "param_v1"
+          },
+          "example_triggers": [
+            "What is the chilled water design flow?"
+          ]
+        },
+        {
+          "code": "PARAM:PRESSURE",
+          "description": "Pressure/differential pressure queries.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "spec_section"
+          ],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "param_v1"
+          },
+          "example_triggers": [
+            "What are the requirements for stairwell differential pressure?"
+          ]
+        },
+        {
+          "code": "PARAM:TEMPERATURE",
+          "description": "Temperature queries.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "param_v1"
+          },
+          "example_triggers": [
+            "What is the temp of HWG-3?"
+          ]
+        },
+        {
+          "code": "PARAM:POWER",
+          "description": "Power (KVA/KW) queries.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "param_v1"
+          },
+          "example_triggers": [
+            "how many KvA is the generator specified"
+          ]
+        },
+        {
+          "code": "PARAM:DIMENSION",
+          "description": "Sizes/rough openings.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "param_v1"
+          },
+          "example_triggers": [
+            "What is the rough opening of a type A window"
+          ]
+        },
+        {
+          "code": "PARAM:ELEVATION",
+          "description": "Elevations/heights.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [
+            "area"
+          ],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "param_v1"
+          },
+          "example_triggers": [
+            "What height are the solar panels installed at?"
+          ]
+        },
+        {
+          "code": "PARAM:WEIGHT",
+          "description": "Weight of tagged items.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "param_v1"
+          },
+          "example_triggers": [
+            "What is the weight of CH-1"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PROD",
+      "name": "Product Data / Catalog",
+      "description": "Product data sheets, numbers, and finishes from submittals/specs.",
+      "subclasses": [
+        {
+          "code": "PROD:PRODUCT_DATA_RETRIEVE",
+          "description": "Fetch product data for a model/tag.",
+          "required_entities": [
+            "product_code"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "DocSearch"
+            ],
+            "few_shot_id": "product_data_v1"
+          },
+          "example_triggers": [
+            "I need the Fry Reglet WC-6 product data"
+          ]
+        },
+        {
+          "code": "PROD:PRODUCT_NUMBER_LOOKUP",
+          "description": "Find product/part numbers.",
+          "required_entities": [
+            "product_code"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "product_data_v1"
+          },
+          "example_triggers": [
+            "What is the product # for AP-2"
+          ]
+        },
+        {
+          "code": "PROD:PRODUCT_COLOR_FINISH",
+          "description": "Color/finish for a product code.",
+          "required_entities": [
+            "product_code"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "product_data_v1"
+          },
+          "example_triggers": [
+            "What color is the ACT-8 tile?"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ADMIN",
+      "name": "Project Meta",
+      "description": "Project identity, address, and teams.",
+      "subclasses": [
+        {
+          "code": "ADMIN:PROJECT_ADDRESS",
+          "description": "Project/site address.",
+          "required_entities": [],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "ProjectDB"
+            ],
+            "few_shot_id": "admin_v1"
+          },
+          "example_triggers": [
+            "What is the project address?"
+          ]
+        },
+        {
+          "code": "ADMIN:PROJECT_IDENTIFICATION",
+          "description": "Which project am I on.",
+          "required_entities": [],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "ProjectDB"
+            ],
+            "few_shot_id": "admin_v1"
+          },
+          "example_triggers": [
+            "What project am I on?"
+          ]
+        },
+        {
+          "code": "ADMIN:TEAM_DIRECTORY",
+          "description": "Key people/roles/contacts.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "DirectorySearch"
+            ],
+            "few_shot_id": "admin_v1"
+          },
+          "example_triggers": [
+            "Who is the general contractor?"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "QRY",
+      "name": "Open RAG Query",
+      "description": "General retrieval when no specific intent matches but still answerable.",
+      "subclasses": [
+        {
+          "code": "QRY:RAG_OPEN_QUERY",
+          "description": "Fallback open-ended retrieval over corpus.",
+          "required_entities": [],
+          "optional_entities": [
+            "topic"
+          ],
+          "routing_hints": {
+            "tools": [
+              "VectorSearch"
+            ],
+            "few_shot_id": "open_query_v1"
+          },
+          "example_triggers": [
+            "What information is there in all the project documents regarding rigging"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "UNIT",
+      "name": "Units & Layout",
+      "description": "Residential unit types, counts, and layouts.",
+      "subclasses": [
+        {
+          "code": "UNIT:UNIT_LAYOUT",
+          "description": "Show layout for a unit type.",
+          "required_entities": [
+            "topic"
+          ],
+          "optional_entities": [],
+          "routing_hints": {
+            "tools": [
+              "DrawingIndex"
+            ],
+            "few_shot_id": "unit_lookup_v1"
+          },
+          "example_triggers": [
+            "show me unit A1",
+            "What is the Unit layout for A2"
+          ]
+        },
+        {
+          "code": "UNIT:UNIT_COUNT",
+          "description": "Count units by building/floor.",
+          "required_entities": [],
+          "optional_entities": [
+            "floor",
+            "area"
+          ],
+          "routing_hints": {
+            "tools": [
+              "QuantityDB"
+            ],
+            "few_shot_id": "unit_lookup_v1"
+          },
+          "example_triggers": [
+            "How many units are on the 5th floor of building 1"
+          ]
+        },
+        {
+          "code": "UNIT:TYPES_BY_FLOOR",
+          "description": "List unit types on a floor/building.",
+          "required_entities": [
+            "area"
+          ],
+          "optional_entities": [
+            "floor"
+          ],
+          "routing_hints": {
+            "tools": [
+              "DrawingIndex"
+            ],
+            "few_shot_id": "unit_lookup_v1"
+          },
+          "example_triggers": [
+            "What unit types are on the top floor of the east building"
+          ]
+        }
+      ]
+    }
+  ],
+  "allowed_chains": [
+    {
+      "from": "DOC:SUBMITTAL_RETRIEVE",
+      "to": "STAT:SUBMITTAL_STATUS",
+      "mode": "SEQUENCE",
+      "pass_keys": [
+        "submittal_id"
+      ]
+    },
+    {
+      "from": "DOC:RFI_RETRIEVE",
+      "to": "STAT:RFI_STATUS",
+      "mode": "SEQUENCE",
+      "pass_keys": [
+        "rfi"
+      ]
+    },
+    {
+      "from": "DOC:RFI_RETRIEVE",
+      "to": "LINK:RFI_TO_CB",
+      "mode": "SEQUENCE",
+      "pass_keys": [
+        "rfi"
+      ]
+    },
+    {
+      "from": "LINK:RFI_TO_CB",
+      "to": "DOC:CB_RETRIEVE",
+      "mode": "SEQUENCE",
+      "pass_keys": [
+        "cb"
+      ]
+    },
+    {
+      "from": "LINK:CB_TO_RFI",
+      "to": "DOC:RFI_RETRIEVE",
+      "mode": "SEQUENCE",
+      "pass_keys": [
+        "rfi"
+      ]
+    },
+    {
+      "from": "DRAW:SCHEDULE_FIND",
+      "to": "DOC:SCHEDULE_DOC_RETRIEVE",
+      "mode": "SEQUENCE",
+      "pass_keys": [
+        "topic"
+      ]
+    },
+    {
+      "from": "DRAW:DRAWING_FIND",
+      "to": "DOC:PLAN_RETRIEVE",
+      "mode": "SEQUENCE",
+      "pass_keys": [
+        "topic"
+      ]
+    },
+    {
+      "from": "SPEC:SECTION_MAP",
+      "to": "DOC:SUBMITTAL_RETRIEVE",
+      "mode": "OPTIONAL",
+      "pass_keys": [
+        "submittal_topic"
+      ]
+    },
+    {
+      "from": "LOC:ASSET_LOCATION",
+      "to": "COUNT:BY_LOCATION",
+      "mode": "PARALLEL",
+      "pass_keys": [
+        "topic",
+        "floor",
+        "area"
+      ]
+    },
+    {
+      "from": "*",
+      "to": "TRAN:TRANSLATE_ANSWER",
+      "mode": "SEQUENCE",
+      "pass_keys": [
+        "answer_text"
+      ]
+    }
+  ],
+  "notes": {
+    "wildcards": {
+      "from": "*",
+      "meaning": "allow translation to follow any atomic intent as a final step"
+    },
+    "composition_defaults": {
+      "single_intent": {
+        "mode": "SEQUENCE",
+        "ordering": [
+          0
+        ]
+      }
+    }
+  }
+}
