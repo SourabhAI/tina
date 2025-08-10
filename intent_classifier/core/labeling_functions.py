@@ -80,7 +80,18 @@ class LabelingFunctions:
             self.lf_product_patterns,
             self.lf_admin_patterns,
             self.lf_query_patterns,
-            self.lf_unit_patterns
+            self.lf_unit_patterns,
+            # New enhanced functions
+            self.lf_personnel_patterns,
+            self.lf_enhanced_drawing_patterns,
+            self.lf_color_material_patterns,
+            self.lf_project_info_patterns,
+            self.lf_vendor_patterns,
+            self.lf_requirement_patterns,
+            self.lf_activity_schedule_patterns,
+            self.lf_equipment_patterns,
+            self.lf_door_hardware_patterns,
+            self.lf_enhanced_definition_patterns
         ]
     
     def _compile_patterns(self):
@@ -771,6 +782,192 @@ class LabelingFunctions:
                 confidence=0.8,
                 abstain=False
             )
+        
+        return LabelingFunctionResult()
+    
+    def lf_personnel_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label personnel/contact queries."""
+        personnel_keywords = ['who is', "who's", 'contact', 'person', 'manager', 'superintendent', 
+                            'contractor', 'architect', 'engineer', 'owner', 'pm', 'project manager']
+        
+        text_lower = text.lower()
+        if any(keyword in text_lower for keyword in personnel_keywords):
+            return LabelingFunctionResult(
+                intent_code="ADMIN:PERSONNEL",
+                confidence=0.8,
+                abstain=False
+            )
+        
+        return LabelingFunctionResult()
+    
+    def lf_enhanced_drawing_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label drawing-related queries more accurately."""
+        drawing_keywords = ['drawing', 'plan', 'elevation', 'section', 'detail', 'diagram', 'sheet']
+        action_keywords = ['show', 'find', 'get', 'pull', 'display', 'view', 'see']
+        
+        text_lower = text.lower()
+        has_drawing_keyword = any(keyword in text_lower for keyword in drawing_keywords)
+        has_action = any(action in text_lower for action in action_keywords)
+        
+        if has_drawing_keyword:
+            # Check if it's about finding where something is on drawings
+            if 'where' in text_lower or 'which' in text_lower or 'what drawing' in text_lower:
+                return LabelingFunctionResult(
+                    intent_code="DRAW:DRAWING_MAP",
+                    confidence=0.85,
+                    abstain=False
+                )
+            # Otherwise it's likely retrieval
+            elif has_action:
+                return LabelingFunctionResult(
+                    intent_code="DRAW:DRAWING_RETRIEVE",
+                    confidence=0.85,
+                    abstain=False
+                )
+        
+        return LabelingFunctionResult()
+    
+    def lf_color_material_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label color and material specification queries."""
+        color_keywords = ['color', 'colour', 'paint', 'finish', 'coating']
+        material_keywords = ['material', 'type', 'kind', 'thickness', 'size', 'dimension']
+        
+        text_lower = text.lower()
+        has_color = any(keyword in text_lower for keyword in color_keywords)
+        has_material = any(keyword in text_lower for keyword in material_keywords)
+        
+        if has_color or has_material:
+            # Check if it's about a specific product
+            if 'product_code' in entities or self.product_pattern.search(text):
+                return LabelingFunctionResult(
+                    intent_code="PROD:MATERIAL_SPEC",
+                    confidence=0.75,
+                    abstain=False
+                )
+        
+        return LabelingFunctionResult()
+    
+    def lf_project_info_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label project information queries."""
+        info_keywords = ['project address', 'project name', 'project number', 'job number',
+                        'project location', 'site address', 'job site']
+        
+        text_lower = text.lower()
+        if any(keyword in text_lower for keyword in info_keywords):
+            return LabelingFunctionResult(
+                intent_code="ADMIN:PROJECT_INFO",
+                confidence=0.85,
+                abstain=False
+            )
+        
+        return LabelingFunctionResult()
+    
+    def lf_vendor_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label vendor/subcontractor queries."""
+        vendor_keywords = ['vendor', 'supplier', 'manufacturer', 'subcontractor', 'sub',
+                          'company', 'firm', 'provider']
+        
+        text_lower = text.lower()
+        if any(keyword in text_lower for keyword in vendor_keywords):
+            # Check if asking for count
+            if self.count_pattern.search(text):
+                return LabelingFunctionResult(
+                    intent_code="COUNT:VENDOR_COUNT",
+                    confidence=0.8,
+                    abstain=False
+                )
+            else:
+                return LabelingFunctionResult(
+                    intent_code="ADMIN:VENDOR_LIST",
+                    confidence=0.75,
+                    abstain=False
+                )
+        
+        return LabelingFunctionResult()
+    
+    def lf_requirement_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label requirement/compliance queries."""
+        requirement_keywords = ['require', 'requirement', 'need', 'must', 'shall', 'comply',
+                               'compliance', 'standard', 'regulation', 'code']
+        
+        text_lower = text.lower()
+        if any(keyword in text_lower for keyword in requirement_keywords):
+            # Check if it's about specs
+            if 'spec' in text_lower or 'specification' in text_lower:
+                return LabelingFunctionResult(
+                    intent_code="SPEC:REQUIREMENTS",
+                    confidence=0.8,
+                    abstain=False
+                )
+        
+        return LabelingFunctionResult()
+    
+    def lf_activity_schedule_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label activity and schedule-related queries."""
+        schedule_keywords = ['activity', 'schedule', 'sequence', 'before', 'after', 'when',
+                            'timeline', 'duration', 'complete', 'start', 'finish']
+        
+        text_lower = text.lower()
+        if any(keyword in text_lower for keyword in schedule_keywords):
+            return LabelingFunctionResult(
+                intent_code="SCHED:ACTIVITY_SEQUENCE",
+                confidence=0.75,
+                abstain=False
+            )
+        
+        return LabelingFunctionResult()
+    
+    def lf_equipment_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label equipment-related queries."""
+        equipment_keywords = ['equipment', 'unit', 'system', 'hvac', 'mechanical', 'electrical',
+                             'plumbing', 'compressor', 'pump', 'fan', 'boiler', 'chiller']
+        
+        text_lower = text.lower()
+        if any(keyword in text_lower for keyword in equipment_keywords):
+            # Check if it's about specifications
+            if 'spec' in text_lower or 'output' in text_lower or 'capacity' in text_lower:
+                return LabelingFunctionResult(
+                    intent_code="PROD:EQUIPMENT_SPEC",
+                    confidence=0.75,
+                    abstain=False
+                )
+        
+        return LabelingFunctionResult()
+    
+    def lf_door_hardware_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label door and hardware queries more accurately."""
+        if 'door_id' in entities or ('door' in text.lower() and 'hardware' in text.lower()):
+            # Check for schedule/list request
+            if 'schedule' in text.lower() or 'list' in text.lower() or 'show' in text.lower():
+                return LabelingFunctionResult(
+                    intent_code="DOC:DOOR_SCHEDULE",
+                    confidence=0.85,
+                    abstain=False
+                )
+            # Check for hardware group
+            elif 'group' in text.lower() or 'hardware' in text.lower():
+                return LabelingFunctionResult(
+                    intent_code="PROD:HARDWARE_GROUP",
+                    confidence=0.8,
+                    abstain=False
+                )
+        
+        return LabelingFunctionResult()
+    
+    def lf_enhanced_definition_patterns(self, text: str, entities: Dict[str, Any]) -> LabelingFunctionResult:
+        """Label definition/explanation queries."""
+        definition_keywords = ['what is', 'what are', "what's", 'define', 'definition', 
+                             'explain', 'mean', 'meaning']
+        
+        text_lower = text.lower()
+        if any(keyword in text_lower for keyword in definition_keywords):
+            # Exclude cases that are asking about specific items
+            if not any(ent in entities for ent in ['ids.rfi', 'ids.submittal', 'product_code']):
+                return LabelingFunctionResult(
+                    intent_code="ADMIN:DEFINITION",
+                    confidence=0.7,
+                    abstain=False
+                )
         
         return LabelingFunctionResult()
     

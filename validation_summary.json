@@ -1,0 +1,53 @@
+{
+  "total_questions": 56,
+  "successful": 56,
+  "failed": 0,
+  "average_processing_time_ms": 0.3653935023716518,
+  "intent_distribution": {
+    "COUNT:RFI_COUNT": 1,
+    "COUNT:VENDOR_COUNT": 1,
+    "ADMIN:PERSONNEL": 3,
+    "PROD:PRODUCT_LOOKUP": 2,
+    "DOC:SUBMITTAL_RETRIEVE": 28,
+    "UNKNOWN:UNKNOWN": 14,
+    "ADMIN:PERMISSIONS": 1,
+    "PROD:HARDWARE_GROUP": 1,
+    "SPEC:SECTION_MAP": 1,
+    "QRY:QUERY_BUILDER": 1,
+    "LOC:PHYSICAL_LOCATION": 2,
+    "DRAW:DRAWING_RETRIEVE": 1,
+    "TRAN:TRANSLATE": 1
+  },
+  "coarse_class_distribution": {
+    "COUNT": 2,
+    "ADMIN": 4,
+    "PROD": 3,
+    "DOC": 28,
+    "UNKNOWN": 14,
+    "SPEC": 1,
+    "QRY": 1,
+    "LOC": 2,
+    "DRAW": 1,
+    "TRAN": 1
+  },
+  "single_intent_count": 55,
+  "multi_intent_count": 1,
+  "composition_modes": {
+    "SINGLE": 55,
+    "PARALLEL": 1
+  },
+  "entity_type_counts": {
+    "product_code": 9,
+    "topic": 27,
+    "submittal_topic": 28,
+    "area": 1,
+    "door_id": 2,
+    "floor": 2,
+    "ids.rfi": 1,
+    "target_language": 1,
+    "discipline": 1
+  },
+  "start_time": "2025-08-09T19:34:42.497941",
+  "end_time": "2025-08-09T19:34:42.518933",
+  "total_duration_seconds": 0.020992
+}

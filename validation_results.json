@@ -1,0 +1,1507 @@
+[
+  {
+    "query_id": "q_000274",
+    "user_id": "aae533da-a6db-4f0e-bd0b-cc94aa3d2360",
+    "question_text": "how many RFIs have been produced?",
+    "created_at": "2024-02-28 12:05:26.368+00",
+    "intents": [
+      {
+        "intent_code": "COUNT:RFI_COUNT",
+        "coarse_class": "COUNT",
+        "confidence": 0.8,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 3.4799575805664062,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000047",
+    "user_id": "64201228-e558-4722-962e-69c831e1ea8f",
+    "question_text": "how many vendors are on this project?",
+    "created_at": "2024-01-03 21:39:53.689+00",
+    "intents": [
+      {
+        "intent_code": "COUNT:VENDOR_COUNT",
+        "coarse_class": "COUNT",
+        "confidence": 0.8,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.4489421844482422,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000060",
+    "user_id": "dacef170-f341-4be8-a049-89039b99d26f",
+    "question_text": "Who is the general contractor?",
+    "created_at": "2024-01-05 19:42:34.434+00",
+    "intents": [
+      {
+        "intent_code": "ADMIN:PERSONNEL",
+        "coarse_class": "ADMIN",
+        "confidence": 0.8,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.24890899658203125,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000308",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "what activity needs to be completed before metal panel ceiling in sequence AC5.2",
+    "created_at": "2024-03-01 13:01:00.503+00",
+    "intents": [
+      {
+        "intent_code": "PROD:PRODUCT_LOOKUP",
+        "coarse_class": "PROD",
+        "confidence": 0.7,
+        "entities": {
+          "product_code": "AC-5"
+        }
+      }
+    ],
+    "entities": {
+      "product_code": "AC-5"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.49495697021484375,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000151",
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "question_text": "What is the product # for act-9",
+    "created_at": "2024-02-01 13:36:54.292+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "product_code": "ACT-9",
+          "topic": "ACT-9",
+          "submittal_topic": "ACT-9"
+        }
+      }
+    ],
+    "entities": {
+      "product_code": "ACT-9",
+      "topic": "ACT-9",
+      "submittal_topic": "ACT-9"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.45013427734375,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000044",
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "question_text": "What is DF_4",
+    "created_at": "2024-01-16 19:16:21.373+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "DF_4",
+          "submittal_topic": "DF_4"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "DF_4",
+      "submittal_topic": "DF_4"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.3159046173095703,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000306",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "Show me the signage shop drawings for sign A59",
+    "created_at": "2024-02-29 15:11:23.062+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "product_code": "A-59",
+          "topic": "sign A59",
+          "submittal_topic": "sign A59"
+        }
+      }
+    ],
+    "entities": {
+      "product_code": "A-59",
+      "topic": "sign A59",
+      "submittal_topic": "sign A59"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.3249645233154297,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000141",
+    "user_id": "64201228-e558-4722-962e-69c831e1ea8f",
+    "question_text": "What color is the paint in lobby on floor 100",
+    "created_at": "2024-01-29 18:18:01.095+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {
+          "area": "lobby"
+        }
+      }
+    ],
+    "entities": {
+      "area": "lobby"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.33402442932128906,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000066",
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "question_text": "what is the size of the Kooltherm insulated panels",
+    "created_at": "2024-01-09 14:12:58.553+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "size of the Kooltherm insulated panels",
+          "submittal_topic": "size of the Kooltherm insulated panels"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "size of the Kooltherm insulated panels",
+      "submittal_topic": "size of the Kooltherm insulated panels"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2796649932861328,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000469",
+    "user_id": "50ad58a0-da8d-49d1-9d07-8a62eac815c4",
+    "question_text": "what type of doors are access control",
+    "created_at": "2024-03-20 12:06:48.485+00",
+    "intents": [
+      {
+        "intent_code": "ADMIN:PERMISSIONS",
+        "coarse_class": "ADMIN",
+        "confidence": 0.7,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.22101402282714844,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000245",
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "question_text": "In the Project Specifications, what is the required inches of water column pressurization that stairs are to be pressurized to? ",
+    "created_at": "2024-02-27 18:56:24.288+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "required inches of water column pressurization that stairs are to be pressurized to",
+          "submittal_topic": "required inches of water column pressurization that stairs are to be pressurized to"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "required inches of water column pressurization that stairs are to be pressurized to",
+      "submittal_topic": "required inches of water column pressurization that stairs are to be pressurized to"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.6172657012939453,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000203",
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "question_text": "what is a VEMS alarm?",
+    "created_at": "2024-02-22 15:47:35.94+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "amp VEMS alarm",
+          "submittal_topic": "amp VEMS alarm"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "amp VEMS alarm",
+      "submittal_topic": "amp VEMS alarm"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.18215179443359375,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000359",
+    "user_id": "eebe0f7f-456e-4775-8586-d0c7c94940b5",
+    "question_text": "What drawing can I find a ESP Sample port?",
+    "created_at": "2024-03-12 17:18:01.543+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "amp ESP Sample portable",
+          "submittal_topic": "amp ESP Sample portable"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "amp ESP Sample portable",
+      "submittal_topic": "amp ESP Sample portable"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.26798248291015625,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000115",
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "question_text": "Where can i find more information on CT-2?",
+    "created_at": "2024-02-02 19:12:26.253+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "product_code": "CT-2",
+          "topic": "more information on CT-2",
+          "submittal_topic": "more information on CT-2"
+        }
+      }
+    ],
+    "entities": {
+      "product_code": "CT-2",
+      "topic": "more information on CT-2",
+      "submittal_topic": "more information on CT-2"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2570152282714844,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000249",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "are we required to seal methane vapor pipe penetrations",
+    "created_at": "2024-02-29 21:06:37.315+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2701282501220703,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000522",
+    "user_id": "cf9bb0fd-94e1-410f-8b4e-b66f6f371fda",
+    "question_text": "how long can liquid apply stay exposed",
+    "created_at": "2024-03-25 20:29:03.301+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2281665802001953,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000265",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "what constitutes \"smoke-tight construction\"",
+    "created_at": "2024-03-01 13:03:49.445+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.1990795135498047,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000146",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "are there any escalator commissioning requirements?",
+    "created_at": "2024-01-24 23:16:07.824+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.22172927856445312,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000058",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "what is the drywall finish at grand stair",
+    "created_at": "2024-01-05 16:38:36.197+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "drywall finish at grand stair",
+          "submittal_topic": "drywall finish at grand stair"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "drywall finish at grand stair",
+      "submittal_topic": "drywall finish at grand stair"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2429485321044922,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000331",
+    "user_id": "fcad35ff-bb4b-435d-84f9-2f3b00c24f57",
+    "question_text": "What\u2019s the output cfm for the air compressor? ",
+    "created_at": "2024-03-01 15:50:06.73+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "air compressor",
+          "submittal_topic": "air compressor"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "air compressor",
+      "submittal_topic": "air compressor"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.7417201995849609,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000350",
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "question_text": "Does door hardware group 029 require an auto opener",
+    "created_at": "2024-03-14 21:14:57.221+00",
+    "intents": [
+      {
+        "intent_code": "PROD:HARDWARE_GROUP",
+        "coarse_class": "PROD",
+        "confidence": 0.8,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2779960632324219,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000395",
+    "user_id": "42703ba8-b086-46f7-81f8-431a9e3c41b1",
+    "question_text": "Who is the superintendent ",
+    "created_at": "2024-03-19 15:53:39.237+00",
+    "intents": [
+      {
+        "intent_code": "ADMIN:PERSONNEL",
+        "coarse_class": "ADMIN",
+        "confidence": 0.8,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.15997886657714844,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000021",
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "question_text": "what specification section is hardware group 099A included in",
+    "created_at": "2024-01-10 14:27:36.169+00",
+    "intents": [
+      {
+        "intent_code": "SPEC:SECTION_MAP",
+        "coarse_class": "SPEC",
+        "confidence": 0.9,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.3008842468261719,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000322",
+    "user_id": "eebe0f7f-456e-4775-8586-d0c7c94940b5",
+    "question_text": "What is the project address?",
+    "created_at": "2024-03-08 15:33:09.7+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "project address",
+          "submittal_topic": "project address"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "project address",
+      "submittal_topic": "project address"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.18310546875,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000019",
+    "user_id": "64201228-e558-4722-962e-69c831e1ea8f",
+    "question_text": "How many filters does JCI owe in their contract? ",
+    "created_at": "2023-11-30 19:58:41.163+00",
+    "intents": [
+      {
+        "intent_code": "QRY:QUERY_BUILDER",
+        "coarse_class": "QRY",
+        "confidence": 0.6,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2582073211669922,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000400",
+    "user_id": "64201228-e558-4722-962e-69c831e1ea8f",
+    "question_text": "I need the Fry Reglet WC-6 product data",
+    "created_at": "2024-03-19 20:04:11.431+00",
+    "intents": [
+      {
+        "intent_code": "PROD:PRODUCT_LOOKUP",
+        "coarse_class": "PROD",
+        "confidence": 0.7,
+        "entities": {
+          "product_code": "WC-6"
+        }
+      }
+    ],
+    "entities": {
+      "product_code": "WC-6"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.24199485778808594,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000048",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "which specifications require in place mock ups",
+    "created_at": "2023-12-22 19:28:11.122+00",
+    "intents": [
+      {
+        "intent_code": "LOC:PHYSICAL_LOCATION",
+        "coarse_class": "LOC",
+        "confidence": 0.7,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.22912025451660156,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000344",
+    "user_id": "24700bd4-14e4-4ac4-adc5-c5985afc1ea2",
+    "question_text": "Can the application be personalized?",
+    "created_at": "2024-03-11 20:37:52.945+00",
+    "intents": [
+      {
+        "intent_code": "ADMIN:PERSONNEL",
+        "coarse_class": "ADMIN",
+        "confidence": 0.8,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.1850128173828125,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000248",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "are we required to seal methane pipe penetrations",
+    "created_at": "2024-02-29 21:02:53.369+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.24008750915527344,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000016",
+    "user_id": "a5efb630-0560-4140-9ec1-db0dce218973",
+    "question_text": "What color is the trellis?",
+    "created_at": "2023-12-13 19:49:45.79+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.16570091247558594,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000035",
+    "user_id": "a0afcc1b-eb3f-4a1e-92fa-83c74816c48f",
+    "question_text": "Please provide the blank PTP PDF file",
+    "created_at": "2023-12-15 16:43:38.595+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.20885467529296875,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000397",
+    "user_id": "cf9bb0fd-94e1-410f-8b4e-b66f6f371fda",
+    "question_text": "what is the thickest Pt slab",
+    "created_at": "2024-03-19 15:58:32.045+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "thickest Pressure treated slab",
+          "submittal_topic": "thickest Pressure treated slab"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "thickest Pressure treated slab",
+      "submittal_topic": "thickest Pressure treated slab"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.21886825561523438,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000018",
+    "user_id": "64201228-e558-4722-962e-69c831e1ea8f",
+    "question_text": "Did we decide to thicken the utility pit wall? ",
+    "created_at": "2023-11-30 19:58:18.48+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.247955322265625,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000366",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "Show me the door hardware schedule for door 10125",
+    "created_at": "2024-03-13 18:49:19.095+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "door_id": "10125",
+          "topic": "door 10125",
+          "submittal_topic": "door 10125"
+        }
+      }
+    ],
+    "entities": {
+      "door_id": "10125",
+      "topic": "door 10125",
+      "submittal_topic": "door 10125"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.26607513427734375,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000171",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "what are level 5 finish requirements for drywall ceilings",
+    "created_at": "2024-01-23 21:46:57.525+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "floor": "Level 5",
+          "topic": "drywall ceilings",
+          "submittal_topic": "drywall ceilings"
+        }
+      }
+    ],
+    "entities": {
+      "floor": "Level 5",
+      "topic": "drywall ceilings",
+      "submittal_topic": "drywall ceilings"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2918243408203125,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000413",
+    "user_id": "42703ba8-b086-46f7-81f8-431a9e3c41b1",
+    "question_text": "What is the exterior elevation ",
+    "created_at": "2024-03-19 16:07:10.419+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "exterior elevation",
+          "submittal_topic": "exterior elevation"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "exterior elevation",
+      "submittal_topic": "exterior elevation"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.1881122589111328,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000439",
+    "user_id": "7d48d25f-dae8-4daa-939a-52da06df6356",
+    "question_text": "Pull up photolight plan",
+    "created_at": "2024-03-20 14:08:49.038+00",
+    "intents": [
+      {
+        "intent_code": "DRAW:DRAWING_RETRIEVE",
+        "coarse_class": "DRAW",
+        "confidence": 0.85,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.1552104949951172,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000182",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "Are there any magnetic door hold opens in the door hardware submittals? ",
+    "created_at": "2024-02-19 13:16:53.984+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "submittal_topic": "Are there any magnetic door hold opens in the door hardware"
+        }
+      }
+    ],
+    "entities": {
+      "submittal_topic": "Are there any magnetic door hold opens in the door hardware"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.3991127014160156,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000050",
+    "user_id": "64201228-e558-4722-962e-69c831e1ea8f",
+    "question_text": "What is the thickness of the drywall in the residence? ",
+    "created_at": "2024-01-02 19:20:25.335+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "thickness of the drywall in the residence",
+          "submittal_topic": "thickness of the drywall in the residence"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "thickness of the drywall in the residence",
+      "submittal_topic": "thickness of the drywall in the residence"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2932548522949219,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000180",
+    "user_id": "6722222d-bb12-4647-83dc-83cc72c78a9f",
+    "question_text": "Show me the hardware schedule for door 20110-2",
+    "created_at": "2024-02-14 14:12:34.92+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "door_id": "20110",
+          "topic": "door 20110 x 2",
+          "submittal_topic": "door 20110 x 2"
+        }
+      }
+    ],
+    "entities": {
+      "door_id": "20110",
+      "topic": "door 20110 x 2",
+      "submittal_topic": "door 20110 x 2"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2758502960205078,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000176",
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "question_text": "What do the specs say about cover plates for sprinkler head covers?",
+    "created_at": "2024-01-24 13:38:44.528+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "cover plates for sprinkler head covers",
+          "submittal_topic": "cover plates for sprinkler head covers"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "cover plates for sprinkler head covers",
+      "submittal_topic": "cover plates for sprinkler head covers"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.6320476531982422,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000420",
+    "user_id": "eebe0f7f-456e-4775-8586-d0c7c94940b5",
+    "question_text": "What is the Unit layout for A2",
+    "created_at": "2024-03-19 17:52:27.983+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "product_code": "A-2",
+          "topic": "Unit layout for A2",
+          "submittal_topic": "Unit layout for A2"
+        }
+      }
+    ],
+    "entities": {
+      "product_code": "A-2",
+      "topic": "Unit layout for A2",
+      "submittal_topic": "Unit layout for A2"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.40793418884277344,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000173",
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "question_text": "Who is the RFI manager for RFI 1866",
+    "created_at": "2024-01-24 16:28:05.348+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "ids.rfi": 1866,
+          "topic": "RFI:1866",
+          "submittal_topic": "RFI:1866"
+        }
+      }
+    ],
+    "entities": {
+      "ids.rfi": 1866,
+      "topic": "RFI:1866",
+      "submittal_topic": "RFI:1866"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.30922889709472656,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000434",
+    "user_id": "4f697825-9bb6-4fa6-b3ab-a46dc6d42919",
+    "question_text": "what hardware group does opening 20302 use",
+    "created_at": "2024-03-18 21:33:01.861+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2772808074951172,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000480",
+    "user_id": "d825bc2b-2f00-4ce1-bfc5-ac891859b9b2",
+    "question_text": "how many units in the east building?",
+    "created_at": "2024-03-20 19:14:33.342+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2739429473876953,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000472",
+    "user_id": "50ad58a0-da8d-49d1-9d07-8a62eac815c4",
+    "question_text": "Where is the thermostat location in the building 2 level 1 corridor ",
+    "created_at": "2024-03-26 21:11:25.892+00",
+    "intents": [
+      {
+        "intent_code": "LOC:PHYSICAL_LOCATION",
+        "coarse_class": "LOC",
+        "confidence": 0.7,
+        "entities": {
+          "floor": "Level 1"
+        }
+      }
+    ],
+    "entities": {
+      "floor": "Level 1"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.4069805145263672,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000143",
+    "user_id": "b7a309f9-8e5f-45db-a9cc-e6b319f01950",
+    "question_text": "Where can i find more information on GL-2?",
+    "created_at": "2024-02-02 18:54:48.124+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "product_code": "GL-2",
+          "topic": "more information on GL-2",
+          "submittal_topic": "more information on GL-2"
+        }
+      }
+    ],
+    "entities": {
+      "product_code": "GL-2",
+      "topic": "more information on GL-2",
+      "submittal_topic": "more information on GL-2"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.30303001403808594,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000111",
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "question_text": "IS there anything in the specifications that would require existing lights to be removed for finish activities and replaced?",
+    "created_at": "2024-01-30 17:48:38.741+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "finish activities",
+          "submittal_topic": "finish activities"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "finish activities",
+      "submittal_topic": "finish activities"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.7789134979248047,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000337",
+    "user_id": "64201228-e558-4722-962e-69c831e1ea8f",
+    "question_text": "How many outlets are required in the residence? ",
+    "created_at": "2024-03-07 15:49:23.077+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2689361572265625,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000483",
+    "user_id": "eebe0f7f-456e-4775-8586-d0c7c94940b5",
+    "question_text": "What color is the paint in the hallways. Please translate into Spanish. ",
+    "created_at": "2024-03-24 01:46:09.157+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      },
+      {
+        "intent_code": "TRAN:TRANSLATE",
+        "coarse_class": "TRAN",
+        "confidence": 0.95,
+        "entities": {
+          "target_language": "es"
+        }
+      }
+    ],
+    "entities": {
+      "target_language": "es"
+    },
+    "composition_mode": "PARALLEL",
+    "execution_order": [
+      0,
+      1
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.8199214935302734,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000412",
+    "user_id": "cf9bb0fd-94e1-410f-8b4e-b66f6f371fda",
+    "question_text": "What is the thickness of the crane pad",
+    "created_at": "2024-03-19 16:03:32.747+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "thickness of the crane pad",
+          "submittal_topic": "thickness of the crane pad"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "thickness of the crane pad",
+      "submittal_topic": "thickness of the crane pad"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2560615539550781,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000092",
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "question_text": "What do the specs say about maximum length of low voltage cabling",
+    "created_at": "2024-01-17 13:23:29.911+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "discipline": "Low Voltage",
+          "topic": "maximum length of low voltage cabling",
+          "submittal_topic": "maximum length of low voltage cabling"
+        }
+      }
+    ],
+    "entities": {
+      "discipline": "Low Voltage",
+      "topic": "maximum length of low voltage cabling",
+      "submittal_topic": "maximum length of low voltage cabling"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.34499168395996094,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000129",
+    "user_id": "74186580-00eb-4790-9be8-7b1cfede6c4e",
+    "question_text": "What are the requirements for control cabling of damper?",
+    "created_at": "2024-01-18 23:34:09.624+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "topic": "control cabling of damper",
+          "submittal_topic": "control cabling of damper"
+        }
+      }
+    ],
+    "entities": {
+      "topic": "control cabling of damper",
+      "submittal_topic": "control cabling of damper"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.2701282501220703,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000378",
+    "user_id": "d825bc2b-2f00-4ce1-bfc5-ac891859b9b2",
+    "question_text": "show me unit A1",
+    "created_at": "2024-03-19 15:43:04.494+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "product_code": "A-1",
+          "topic": "unit A1",
+          "submittal_topic": "unit A1"
+        }
+      }
+    ],
+    "entities": {
+      "product_code": "A-1",
+      "topic": "unit A1",
+      "submittal_topic": "unit A1"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.1556873321533203,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000529",
+    "user_id": "44685288-be6e-492f-bd76-db617b6f745d",
+    "question_text": "what is light type G1",
+    "created_at": "2024-03-21 12:41:25.206+00",
+    "intents": [
+      {
+        "intent_code": "DOC:SUBMITTAL_RETRIEVE",
+        "coarse_class": "DOC",
+        "confidence": 0.9,
+        "entities": {
+          "product_code": "G-1",
+          "topic": "light type G1",
+          "submittal_topic": "light type G1"
+        }
+      }
+    ],
+    "entities": {
+      "product_code": "G-1",
+      "topic": "light type G1",
+      "submittal_topic": "light type G1"
+    },
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.17309188842773438,
+    "success": true,
+    "warnings": []
+  },
+  {
+    "query_id": "q_000499",
+    "user_id": "cf9bb0fd-94e1-410f-8b4e-b66f6f371fda",
+    "question_text": "what color are the windows",
+    "created_at": "2024-03-22 15:40:16.509+00",
+    "intents": [
+      {
+        "intent_code": "UNKNOWN:UNKNOWN",
+        "coarse_class": "UNKNOWN",
+        "confidence": 0.0,
+        "entities": {}
+      }
+    ],
+    "entities": {},
+    "composition_mode": "SINGLE",
+    "execution_order": [
+      0
+    ],
+    "join_keys": [],
+    "processing_time_ms": 0.16999244689941406,
+    "success": true,
+    "warnings": []
+  }
+]

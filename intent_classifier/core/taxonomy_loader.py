@@ -136,7 +136,10 @@ class TaxonomyLoader:
         class_data = self._coarse_classes[coarse_class]
         for subclass in class_data.subclasses:
             if subclass['code'] == intent_code:
-                return subclass
+                # Add coarse_class to the returned info
+                result = subclass.copy()
+                result['coarse_class'] = coarse_class
+                return result
         
         return None
     
@@ -216,6 +219,10 @@ class TaxonomyLoader:
     def get_entity_schema(self, entity_key: str) -> Optional[TaxonomyEntity]:
         """Get the schema for an entity."""
         return self._entity_schemas.get(entity_key)
+    
+    def get_entity_definitions(self) -> List[Dict[str, Any]]:
+        """Get all entity definitions for the EntityExtractor."""
+        return self.taxonomy_data.get('entities_schema', [])
     
     def validate_entity(self, entity_key: str, value: Any) -> bool:
         """Validate an entity value against its schema."""
